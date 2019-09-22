@@ -12,7 +12,12 @@ WHERE
        file.project = "iminuit" OR
        file.project = "matplotlib" OR
        file.project = "pandas" OR
-       file.project = "numpy")
+       file.project = "numpy" OR
+       file.project = "tensorflow" OR
+       file.project = "torch" OR
+       file.project = "Keras" OR
+       file.project = "scikit-learn" OR
+       file.project = "scipy")
   AND details.distro.name LIKE "%Scientific%" AND details.installer.name = "pip"
 GROUP BY project, version, date, country
 ORDER BY project, version, date, country
