@@ -1,0 +1,345 @@
+number,title,user,state,date_created,date_closed,numcomments,ispull
+344,"Fix append method of TTree",reikdas,closed,2019-09-20T11:29:53Z,2019-09-20T12:08:26Z,0,True
+343,"Fix issue340",reikdas,closed,2019-09-20T06:05:26Z,2019-09-20T10:38:24Z,7,True
+342,"Fixed extend for flush=True",reikdas,closed,2019-09-20T03:11:45Z,2019-09-20T10:38:52Z,1,True
+341,"vector<uint_64> is read as jagged array of dtype uint32",DraTeots,closed,2019-09-19T16:57:35Z,2019-09-20T12:45:15Z,3,False
+340,"Error reading with uproot root files, with TTree, written with uproot",marinang,closed,2019-09-19T08:00:21Z,2019-09-20T10:38:24Z,7,False
+339,"Segmentation Fault (Crash) in `tests/test_write.py` while testing",kgizdov,closed,2019-09-18T12:02:15Z,2019-09-18T16:33:28Z,15,False
+338,"Working with std::vector<std::string>",DraTeots,closed,2019-09-17T14:09:58Z,2019-09-17T14:29:38Z,2,False
+337,"Extend and append methods added",reikdas,closed,2019-09-16T21:41:12Z,2019-09-17T15:56:24Z,1,True
+336,"append should take a dictionary of numbers, not arrays",reikdas,closed,2019-09-16T14:59:52Z,2019-09-20T12:08:26Z,0,False
+335,"Integer flushsize should be number of entries",reikdas,open,2019-09-16T14:59:49Z,None,0,False
+334,"README - Add TTree writing documentation",reikdas,closed,2019-09-16T14:59:46Z,2019-09-20T10:38:01Z,1,False
+333,"Unable to compress data larger than 2^24 bytes",reikdas,open,2019-09-09T15:44:22Z,None,0,False
+332,"Don't attempt to set a pandas.RangeIndex in-place.",jpivarski,closed,2019-09-05T19:28:42Z,2019-09-06T23:04:34Z,0,True
+331,"AttributeError when using `uproot.pandas.iterate`.",marinang,closed,2019-09-05T19:16:17Z,2019-09-06T23:06:31Z,3,False
+330,"Fixes #329 by adding TRefArray.",jpivarski,closed,2019-09-05T14:57:34Z,2019-09-05T15:55:44Z,0,True
+329,"Issues reading some TRef arrays",HenryDayHall,closed,2019-09-05T12:40:02Z,2019-09-05T15:11:59Z,1,False
+328,"Fixes issue #327.",jpivarski,closed,2019-09-04T12:55:40Z,2019-09-04T14:05:25Z,3,True
+327,"Error in Reading TTree",HimanshuCERN,closed,2019-09-04T11:33:03Z,2019-09-04T12:57:01Z,2,False
+326,"Implemented TRef as an object that can live in TTrees.",jpivarski,closed,2019-08-30T18:55:53Z,2019-08-30T19:10:29Z,0,True
+325,"Fixes issue #243 (again) for a file made from a new version of ROOT.",jpivarski,closed,2019-08-30T13:17:53Z,2019-08-30T14:00:34Z,0,True
+324,"How can I follow a TRef?",HenryDayHall,closed,2019-08-30T08:25:06Z,2019-08-30T19:10:45Z,4,False
+323,"Can't convert ChunkedArray from a lazy array with a selection to a numpy array",beojan,open,2019-08-24T10:28:43Z,None,3,False
+322,"Pandas Dataframe and jagged arrays in different branches",sznajder,closed,2019-08-23T21:25:13Z,2019-08-23T22:14:40Z,1,False
+321,"Preskim root file ",alefisico,closed,2019-08-22T14:07:21Z,2019-08-22T14:29:18Z,6,False
+320,"Fix memory issue (#319) by recovering all interesting branches before reading any.",jpivarski,closed,2019-08-21T18:17:46Z,2019-08-21T19:54:18Z,0,True
+319,"Extremely large memory consumption when reading from an arbitrary location of a root file",kandrosov,closed,2019-08-21T15:48:13Z,2019-08-21T18:18:32Z,3,False
+318,"Explicitly forbid awkward 1.0 well in advance of such a thing existing.",jpivarski,closed,2019-08-16T20:24:12Z,2019-08-16T20:50:17Z,0,True
+317,"LazyArray loading of `std::vector<>` branch fails with 'value too large' error",chenel,open,2019-08-16T17:12:44Z,None,4,False
+316,"ROOT cannot append objects to empty files created by uproot",reikdas,open,2019-08-14T19:40:16Z,None,0,False
+315,"Fixes fSeekFree",reikdas,closed,2019-08-14T18:43:53Z,2019-08-14T19:13:22Z,1,True
+314,"Loading aligned data from multiple TTrees - friending in uproot?",pibion,closed,2019-08-14T16:46:20Z,2019-08-14T17:56:41Z,5,False
+313,"Add ability to write TBranches with baskets",reikdas,closed,2019-08-13T19:48:06Z,2019-09-06T22:45:10Z,0,True
+312,"TTrees with empty TBranches",reikdas,closed,2019-08-13T15:52:31Z,2019-08-13T19:12:57Z,0,True
+311,"Replace pip with mamba/conda in .travis.yml",reikdas,open,2019-08-13T15:50:08Z,None,0,False
+310,"Problem Opening TH1F in TTree",lukepolson,closed,2019-08-08T08:27:05Z,2019-08-09T18:00:48Z,6,False
+309,"Get tree/branch size on disk",mverzett,closed,2019-08-06T08:29:47Z,2019-08-06T11:18:14Z,4,False
+308,"Fixed xxhash import error",reikdas,closed,2019-07-28T21:26:23Z,2019-07-30T21:12:01Z,1,True
+307,"Comparing checksum while reading lz4 compressed files",reikdas,closed,2019-07-24T04:39:28Z,2019-07-25T15:53:21Z,3,True
+306,"uproot.lazyarray doesn't crash/warn if given multiple branches",kratsg,open,2019-07-19T04:45:16Z,None,1,False
+305,"Bin labels can now be written",reikdas,closed,2019-07-16T17:53:13Z,2019-07-17T15:49:07Z,3,True
+304,"Bug in __dir__ and __getattr__ in base.py?",carlgwilliam,closed,2019-07-16T14:52:08Z,2019-07-16T14:58:26Z,2,False
+303,"depend on awkward 0.12+ to fix tree.pandas.df",jpivarski,closed,2019-07-11T19:46:58Z,2019-07-11T20:14:51Z,0,True
+302,"Add `.array` to `TMatrix`",MaxNoe,closed,2019-07-03T13:41:43Z,2019-07-24T21:18:40Z,2,False
+301,"ROOT 6.18.00 streamers",reikdas,closed,2019-06-28T14:59:31Z,2019-06-28T16:34:28Z,1,True
+300,"Test ROOT versions 6.16.00 and 6.18.00",jpivarski,closed,2019-06-28T14:31:30Z,2019-06-28T16:12:31Z,2,True
+299,"Trigger Binder builds on both GKE and OVH clusters",matthewfeickert,closed,2019-06-27T14:47:45Z,2019-06-27T14:51:51Z,1,True
+298,"Added test to check if directory size is increased",reikdas,closed,2019-06-26T16:11:43Z,2019-06-28T17:59:56Z,2,True
+297,"Some Taxis attributes",reikdas,closed,2019-06-26T15:20:58Z,2019-06-26T18:44:13Z,3,True
+296,"Error with Lazy arrays with caching",zhenbinwu,closed,2019-06-25T20:31:16Z,2019-06-25T23:23:22Z,1,False
+295,"Add from __future__ import absolute_import",chrisburr,closed,2019-06-25T07:56:41Z,2019-06-25T13:01:43Z,1,True
+294,"Name clash between pandas.py & pandas (python 2 on SWAN)",stderr-enst,closed,2019-06-25T06:42:02Z,2019-06-25T12:59:20Z,4,False
+293,"Propagate FileSource futures setup to threadlocal",lgray,closed,2019-06-24T19:51:04Z,2019-06-24T21:15:21Z,5,True
+292,"Use curl -L to have trigger_binder follow URL redirect",matthewfeickert,closed,2019-06-22T16:57:29Z,2019-06-22T18:42:42Z,1,True
+291,"Able to write TProfile3D",reikdas,closed,2019-06-20T04:40:07Z,2019-06-20T11:39:06Z,0,True
+290,"coordinated CMS NanoAOD release",jpivarski,closed,2019-06-13T19:46:51Z,2019-06-14T23:43:22Z,0,True
+289,"processing list of files via `uproot.iterate` with `executor` - no speedup?",lukasheinrich,closed,2019-06-11T17:46:47Z,2019-06-11T18:21:57Z,2,False
+288,"Writing LZ4 compressed ROOT files",reikdas,closed,2019-06-09T17:16:16Z,2019-06-11T19:24:33Z,0,True
+287,"Issues 285 286",jpivarski,closed,2019-06-05T18:14:35Z,2019-06-05T20:01:45Z,0,True
+286,"Negative entrystart, entrystop is not counting from the end of the branch",jpivarski,closed,2019-06-04T23:35:33Z,2019-06-05T20:01:46Z,1,False
+285,"Select entrysteps base on Cache size",zhenbinwu,closed,2019-06-04T20:11:30Z,2019-06-05T20:01:46Z,6,False
+284,"Length of list of string (branches) in tree.pandas.df(list_of_strings)",ahmedmustahid,closed,2019-06-04T06:28:39Z,2019-07-24T21:18:00Z,7,False
+283,"Unimplemented TStreamerSTL map<long,int>, set<long>?",rcross2,closed,2019-06-03T17:45:13Z,2019-06-03T21:46:59Z,10,False
+282,"uproot can now write TProfile and TProfile2D",reikdas,closed,2019-06-02T18:08:46Z,2019-06-03T16:14:11Z,3,True
+281,"Comment out unused cursor methods",reikdas,closed,2019-05-30T13:09:23Z,2019-05-30T13:28:12Z,0,True
+280,"fixes for LPC HATS",jpivarski,closed,2019-05-26T21:39:35Z,2019-05-27T01:37:14Z,0,True
+279,"Write LZ4 compressed files",reikdas,closed,2019-05-21T03:50:49Z,2019-06-11T19:24:33Z,0,False
+278,"Awkward lazyarrays",jpivarski,closed,2019-05-20T14:52:52Z,2019-05-21T03:03:56Z,2,True
+277,"index dtype error in compact",jpata,closed,2019-05-15T21:06:38Z,2019-05-15T21:46:59Z,2,False
+276,"memmap caching of uproot arrays",jpata,closed,2019-05-10T20:07:15Z,2019-05-15T21:27:40Z,3,False
+275,"should fix #274",jpivarski,closed,2019-05-09T22:56:35Z,2019-05-10T20:56:18Z,3,True
+274,"uproot.iterate does not like multiple files",kratsg,closed,2019-05-09T22:31:02Z,2019-05-10T20:56:19Z,1,False
+273,"Reading custom classes ... again",8me,closed,2019-05-09T13:21:49Z,2019-05-09T13:25:10Z,0,False
+272,"Is there a version for scala/java?",alonsoir,closed,2019-05-07T13:36:11Z,2019-05-07T14:30:37Z,1,False
+271,"Faster travis tests using mamba",reikdas,closed,2019-04-30T08:34:08Z,2019-05-20T21:35:59Z,10,True
+270,"Make XRootDSource fork-safe",nsmith-,closed,2019-04-25T18:13:48Z,2019-04-25T19:36:14Z,2,True
+269,"Add support for writing 2 and 3 dimensional histograms",reikdas,closed,2019-04-22T16:16:59Z,2019-04-25T18:25:21Z,24,True
+268,"Uniform copyright message",jpivarski,closed,2019-04-11T17:33:06Z,2019-04-11T17:52:51Z,2,True
+267,"uproot 3.4.17 not opening ROOT files (but 3.4.4 does)",sdporzio,closed,2019-04-01T16:18:03Z,2019-04-11T16:10:08Z,3,False
+266,"Use mamba instead of conda for most builds",chrisburr,closed,2019-03-29T10:46:41Z,2019-03-30T21:07:40Z,2,True
+265,"Write tests",reikdas,closed,2019-03-28T14:48:42Z,2019-03-30T21:03:32Z,7,True
+264,"Fix iteration over DataFrames and provide more interfaces",jpivarski,closed,2019-03-27T14:07:19Z,2019-03-27T16:26:43Z,7,True
+263,"MultiIndex pandas dataframe from uproot.iterate",afrankenthal,closed,2019-03-27T07:56:57Z,2019-03-27T14:21:59Z,8,False
+262,"[WIP] Issue #260: read TObjArrays of custom classes",jpivarski,closed,2019-03-20T01:25:55Z,2019-03-27T16:26:44Z,0,True
+261,"Enable reading of Float16_t branches + fixes for Double32_t",plexoos,closed,2019-03-18T22:40:09Z,2019-03-19T12:16:13Z,2,True
+260,"Reading TCanvases without streamer info",SimoneMender,closed,2019-03-18T17:21:09Z,2019-03-22T11:09:10Z,10,False
+259,"Fix length of streamers",reikdas,closed,2019-03-17T06:59:05Z,2019-03-18T13:36:20Z,9,True
+258,"Enable ZLIB and LZMA compression while writing",reikdas,closed,2019-03-16T02:11:43Z,2019-05-21T01:38:04Z,9,True
+257,"Let flat pandas dataframes have the same index format as jagged dfs",benkrikler,closed,2019-03-15T17:41:15Z,2019-03-15T20:06:08Z,4,True
+256,"Index of tree.pandas.df doesnt use entrystart for flat arrays",benkrikler,closed,2019-03-15T16:58:00Z,2019-03-20T01:35:26Z,3,False
+255,"Writing with uproot",beojan,closed,2019-03-15T13:10:06Z,2019-03-15T13:17:50Z,3,False
+254,"Fixes #253",reikdas,closed,2019-03-13T20:39:14Z,2019-03-15T14:52:04Z,1,True
+253,"dev - context is not None for compressed ROOT files",reikdas,closed,2019-03-13T19:45:29Z,2019-03-15T14:52:21Z,0,False
+252,"Best way to produce awkward.Table from tree.arrays",benkrikler,closed,2019-03-12T14:41:54Z,2019-03-20T01:35:53Z,5,False
+251,"Best way to produce an awkward.Table of tree arrays?",benkrikler,closed,2019-03-12T14:37:09Z,2019-03-12T15:13:58Z,5,False
+250,"JaggedArray method _broadcast has changed to public method tojagged",gregbarbour,closed,2019-03-11T16:28:03Z,2019-03-11T16:35:45Z,4,False
+249,"Attach proper streamer to TClonesArray branch",plexoos,closed,2019-03-09T00:21:49Z,2019-03-09T07:12:09Z,0,True
+248,"problem in converting ROOT file to CSV",cleonido,closed,2019-03-08T22:34:07Z,2019-03-09T07:08:26Z,5,False
+247,"Memory Usage with XRootD",zhenbinwu,closed,2019-03-07T22:57:40Z,2019-03-07T23:18:45Z,1,False
+246,"say which file failed",belforte,closed,2019-03-07T20:53:20Z,2019-03-07T22:15:13Z,5,False
+245,"Add STLMap as a genobj type",jpivarski,closed,2019-03-06T21:39:35Z,2019-03-07T08:21:25Z,0,True
+244,"Open Binder into JupyterLab",matthewfeickert,closed,2019-03-06T09:23:25Z,2019-03-06T16:10:47Z,3,True
+243,"reading/interpret std::map<std::string, double> ",Lucas-Borgna,closed,2019-03-05T16:26:28Z,2019-03-06T21:43:18Z,6,False
+242,"Preload chunked data sources",jpivarski,closed,2019-03-04T08:45:15Z,2019-03-06T06:27:06Z,9,True
+241,"Deal with fixed size arrays as part of jagged one",plexoos,closed,2019-03-01T23:44:25Z,2019-03-02T19:45:20Z,5,True
+240,"Preload data in chunked data sources",jpivarski,closed,2019-02-28T21:54:20Z,2019-03-06T06:27:07Z,1,False
+239,"Just take the first commit of #237 because the rest won't work until scikit-hep-testdata is fixed",jpivarski,closed,2019-02-28T12:41:46Z,2019-02-28T19:12:55Z,1,True
+238,"KeryError from numentries when branch is missing",belforte,closed,2019-02-28T03:51:14Z,2019-02-28T14:40:37Z,7,False
+237,"[WIP] Drop ROOT files in tests/samples in favor of scikit-hep-testdata",jpivarski,open,2019-02-27T22:51:11Z,None,3,True
+236,"`TNamed` attributes",l-althueser,closed,2019-02-27T17:05:38Z,2019-02-27T17:22:31Z,1,False
+235,"Test auto interpretation for branches in Event.root",plexoos,closed,2019-02-27T00:31:02Z,2019-02-27T18:04:26Z,8,True
+234,"uproot raises `TypeError: unsupported operand type(s) for -: 'NoneType' and 'int'` when root file doesn't have TTrees or TBranches",rklasen,closed,2019-02-22T21:00:12Z,2019-02-22T21:53:02Z,1,False
+233,"generalize Pandas DataFrame flattening to work with any numeric type, such as Double32",jpivarski,closed,2019-02-22T16:29:33Z,2019-02-22T17:08:32Z,0,True
+232,"Issue with JaggedArray",fmazzasc,closed,2019-02-22T13:22:04Z,2019-02-22T16:31:21Z,1,False
+231,"Asseration error while reading TBranchElement",thomaskeck,closed,2019-02-21T12:31:31Z,2019-02-25T12:26:25Z,4,False
+230,"Add connection period and duration limits to Binder build API curl",matthewfeickert,closed,2019-02-19T22:06:12Z,2019-02-19T22:25:22Z,3,True
+229,"Read Double32_t values with truncated mantissa",plexoos,closed,2019-02-11T21:03:48Z,2019-02-11T21:23:44Z,4,True
+228,"namedecode for elements in branches",sdporzio,closed,2019-02-11T11:44:32Z,2019-02-22T17:13:56Z,4,False
+227,"uproot.pandas.df(flatten=True) failing if varying dimensions of branches",sdporzio,closed,2019-02-08T17:03:18Z,2019-02-09T11:57:55Z,10,False
+226,"loosen definition of 'compatible' to depend only on class name",jpivarski,closed,2019-02-08T15:47:13Z,2019-02-11T21:06:17Z,0,True
+225,"\"for arrays in uproot.iterate(...)\" raises value exception ",rklasen,closed,2019-02-08T14:56:07Z,2019-02-12T09:49:49Z,13,False
+224,"Objects written by uproot and ROOT are read in a different \"cycle\" order by ROOT",reikdas,open,2019-02-08T14:28:26Z,None,2,False
+223,"Speedup TTree.pandas.df(flatten=True) by about factor 8",guitargeek,closed,2019-02-06T01:07:40Z,2019-02-06T15:05:48Z,10,True
+222,"eliminate Python 3.7 warning and cleanup",jpivarski,closed,2019-01-31T21:19:05Z,2019-01-31T21:54:46Z,1,True
+221,"Use awkward.StringArray instead of a special-purpose awkward.ObjectArray for string data",jpivarski,open,2019-01-30T01:38:17Z,None,0,False
+220,"Depend on awkward 0.8.0, uproot-methods 0.4.0",jpivarski,closed,2019-01-29T21:05:47Z,2019-01-30T00:42:53Z,1,True
+219,"highlight performance of uproot in README.md",HDembinski,closed,2019-01-24T08:38:34Z,2019-01-30T20:06:31Z,2,False
+218,"Applied changes in issue #217 of original repository scikit-hep/uproot.",HealthyPear,closed,2019-01-23T18:57:16Z,2019-01-24T21:56:32Z,4,True
+217,"Option in iterate method to access the current file used by uproot.iterate at each step",HealthyPear,closed,2019-01-23T18:03:06Z,2019-01-23T21:12:15Z,3,False
+216,"Inconsistency in branch names between Python2 and 3",HealthyPear,closed,2019-01-23T14:52:42Z,2019-01-23T15:04:01Z,2,False
+215,"addresses #205: handle branch with zero baskets",jpivarski,closed,2019-01-21T20:59:10Z,2019-01-22T17:26:51Z,0,True
+214,"fixes #213: streamers had not been attached to branches when they wer\u2026",jpivarski,closed,2019-01-18T20:04:01Z,2019-01-18T22:08:34Z,0,True
+213,"Problem with TVector3",daria137,closed,2019-01-18T10:49:00Z,2019-01-18T20:06:42Z,1,False
+212,"Problem adding jagged TLorentzVectors",areinsvo,closed,2019-01-17T23:40:55Z,2019-01-18T22:19:42Z,4,False
+211,"Http authentication",noahhdf,closed,2019-01-16T20:51:40Z,2019-01-19T14:59:45Z,18,True
+210,"read password protected fileover http",noahhdf,closed,2019-01-16T15:27:38Z,2019-01-19T14:59:44Z,1,False
+209,"TBranch->GetBasketSeek() API?",xweichu,closed,2019-01-16T02:03:16Z,2019-01-16T15:04:50Z,1,False
+208,"cut on the converted array ",BinishB,closed,2019-01-15T14:34:18Z,2019-01-18T21:08:10Z,2,False
+207,"Use Binder build API and use curl to trigger build",matthewfeickert,closed,2019-01-14T14:51:49Z,2019-01-14T15:15:56Z,7,True
+206,"Limit numpy<1.16.0 in PyPy due to Travis CI release lag",matthewfeickert,closed,2019-01-14T08:27:13Z,2019-01-14T14:29:51Z,2,True
+205,"Iterate method now works, but fails when branch has 0 baskets",HealthyPear,closed,2019-01-11T19:47:10Z,2019-01-22T17:21:24Z,14,False
+204,"TBranch.fBasketSeek type is wrong for large files produced by Geant",jpivarski,closed,2019-01-07T19:04:33Z,2019-01-07T20:28:44Z,0,True
+203,"Revert \"Use Binder build API and remove trigger_binder.py and selenium dependency\"",jpivarski,closed,2019-01-07T13:34:05Z,2019-01-07T17:02:32Z,5,True
+202,"Use Binder build API and remove trigger_binder.py and selenium dependency",matthewfeickert,closed,2019-01-07T05:27:14Z,2019-01-07T12:27:29Z,5,True
+201,"Large Geant files",henryiii,closed,2019-01-03T21:36:23Z,2019-01-07T20:07:16Z,7,False
+200,"TH2 variances returned as a list not a 2 by 2 array ",alasfar-lina,closed,2018-12-24T18:12:04Z,2018-12-24T18:19:29Z,1,False
+199,"Add option in iterate method to jump files which don't have a TTree",HealthyPear,closed,2018-12-18T15:44:43Z,2018-12-19T14:30:05Z,2,False
+198,"Reading nested TTree TBranchElement",jdbrice,closed,2018-12-14T16:23:27Z,2019-01-07T13:49:09Z,5,False
+197,"Allow to read TNonSplitBrowsable objects",moritzhuetten,closed,2018-12-14T14:23:04Z,2019-01-07T13:48:54Z,5,False
+196,"More histogram intro",HDembinski,closed,2018-12-14T11:52:50Z,2018-12-14T15:44:22Z,6,True
+195,"Prepare 330",jpivarski,closed,2018-12-13T21:52:19Z,2018-12-13T22:40:37Z,0,True
+194,"TH1D class methods `values`, `allvalues`, `variances`, `allvariances` return lists, not arrays",HDembinski,closed,2018-12-13T09:48:44Z,2018-12-13T16:14:11Z,3,False
+193,"documentation for histogram unclear",HDembinski,closed,2018-12-13T09:45:29Z,2018-12-14T15:41:54Z,7,False
+192,"Install error for Python 3.7",HDembinski,closed,2018-12-13T09:13:09Z,2018-12-13T15:42:41Z,16,False
+191,"Improve help() output for uproot",HDembinski,closed,2018-12-13T08:37:37Z,2018-12-13T15:40:18Z,3,False
+190,"XRootD-HTTPS support",PerilousApricot,closed,2018-12-12T03:25:21Z,2018-12-13T21:54:19Z,18,False
+189,"Fix moved array types.",riga,closed,2018-12-07T10:05:13Z,2018-12-07T12:49:11Z,8,True
+188,"Issue 187",jpivarski,closed,2018-11-30T12:51:57Z,2018-11-30T13:07:25Z,0,True
+187,"Jagged arrays  and double32_t",fmazzasc,closed,2018-11-29T21:50:04Z,2018-11-30T12:34:11Z,7,False
+186,"Missing backports.lzma dependency in Python 2.7",riga,closed,2018-11-29T00:59:58Z,2018-11-29T02:29:55Z,2,False
+185,"Tree structure",xxiang4,closed,2018-11-25T00:04:51Z,2018-12-12T23:34:58Z,4,False
+184,"Update ROOT version while writing",reikdas,closed,2018-11-19T03:53:28Z,2018-11-20T04:32:18Z,3,True
+183,"Add ROOT to Travis CI",chrisburr,closed,2018-11-13T16:11:01Z,2019-01-30T20:56:41Z,26,True
+182,"Implemented std::bitset",jpivarski,closed,2018-11-13T04:26:28Z,2018-11-13T04:45:11Z,0,True
+181,"Enable compression while writing",reikdas,closed,2018-11-07T04:33:48Z,2019-05-21T01:38:04Z,2,False
+180,"Add all attributes when copying XRootDSource",chrisburr,closed,2018-11-03T06:38:43Z,2018-11-04T12:59:31Z,1,True
+179,"Duplicate scalar columns (or custom index) in Pandas DF with flatten=True",beojan,closed,2018-10-31T06:13:05Z,2018-11-01T13:33:50Z,8,False
+178,"leaflist TTrees to Pandas",jpivarski,closed,2018-10-30T12:47:10Z,2018-10-30T14:26:06Z,0,True
+177,"Can't read custom leaflist struct into Pandas",beojan,closed,2018-10-30T10:50:31Z,2018-10-30T13:03:58Z,9,False
+176,"Issue 175",jpivarski,closed,2018-10-29T22:30:01Z,2018-10-30T12:46:04Z,0,True
+175,"Type name mismatch for streamer and a corresponding branch for std::pair",plexoos,closed,2018-10-29T21:34:43Z,2018-10-30T13:04:18Z,4,False
+174,"Removed explicit localsource",reikdas,closed,2018-10-27T16:21:43Z,2018-10-29T18:40:13Z,0,True
+173,"Issue131",reikdas,closed,2018-10-27T15:03:49Z,2018-10-29T17:43:54Z,0,True
+172,"Update README.rst",reikdas,closed,2018-10-24T20:13:43Z,2018-10-24T20:14:54Z,1,True
+171,"TypeError: 'function' object is not iterable",reikdas,closed,2018-10-24T19:59:08Z,2018-10-29T18:40:13Z,3,False
+170,"addresses issue #168: provide a way to skip speedbump bytes",jpivarski,closed,2018-10-22T21:06:13Z,2018-10-22T22:01:18Z,0,True
+169,"Reading in RooFit objects",shane-breeze,closed,2018-10-19T16:44:30Z,2018-10-22T22:17:30Z,2,False
+168,"Open a custom ROOT object",LuTse,closed,2018-10-19T14:58:28Z,2018-10-22T21:54:48Z,5,False
+167,"tree itervalues 'Undefined' object has no attribute 'name'",douglasdavis,closed,2018-10-18T20:38:11Z,2018-10-22T19:04:42Z,8,False
+166,"Read a TArrayF",MaxNoe,closed,2018-10-16T11:16:12Z,2018-10-16T13:09:36Z,13,False
+165,"introduce a _branchlookup dict for faster lookups",jpivarski,closed,2018-10-15T16:55:29Z,2018-10-15T17:25:03Z,0,True
+164,"Performance issues reading a large number of branches",MaxNoe,closed,2018-10-15T14:00:10Z,2018-10-15T16:57:16Z,13,False
+163,"switch from unittest to pytest",jpivarski,closed,2018-10-15T13:32:35Z,2018-10-16T01:28:14Z,9,True
+162,"YOU ARE AWESOME",MaxNoe,closed,2018-10-15T11:41:19Z,2018-10-15T12:14:21Z,1,False
+161,"Issues when reading array branches from cloned trees",mverzett,closed,2018-10-12T14:44:31Z,2018-10-16T14:16:59Z,4,False
+160,"Henryiii filterpandas",jpivarski,closed,2018-10-11T14:16:18Z,2018-10-11T14:52:07Z,1,True
+159,"\"Masks\" or \"Views\" of a tree.",benkrikler,closed,2018-10-11T14:07:22Z,2019-05-21T04:05:05Z,6,False
+158,"Migrate from unittest to pytest",jpivarski,closed,2018-10-10T23:04:15Z,2018-10-16T01:29:35Z,1,False
+157,"Adding test and support for None for flatten",henryiii,closed,2018-10-10T10:40:49Z,2018-10-11T14:16:51Z,8,True
+156,"Filtering pandas df",henryiii,closed,2018-10-09T19:26:18Z,2018-10-11T15:06:05Z,11,False
+155,"Issue148",jpivarski,closed,2018-10-08T14:23:39Z,2018-10-08T14:25:42Z,0,True
+154,"[WIP] Add tests for Jupyter Notebooks",matthewfeickert,closed,2018-10-08T02:19:24Z,2019-02-27T21:08:12Z,11,True
+153,"Have Selenium properly wait for page load",matthewfeickert,closed,2018-10-08T00:07:00Z,2018-10-08T01:34:34Z,4,True
+152,"Adding support for IPython key completions",henryiii,closed,2018-10-06T21:44:41Z,2018-10-07T15:14:48Z,12,True
+151,"Support IPython completion ",henryiii,closed,2018-10-06T21:11:36Z,2018-10-08T12:55:08Z,1,False
+150,"Test Jupyter Notebooks in papermill",matthewfeickert,open,2018-10-05T14:24:20Z,None,6,False
+149,"Trigger Binder to build image on pushes to master",matthewfeickert,closed,2018-10-05T14:03:47Z,2018-10-07T01:24:39Z,16,True
+148,"Add verbose diagnostic for opening xrootd file",vkuznet,closed,2018-10-05T13:41:14Z,2018-10-08T14:25:34Z,10,False
+147,"changes need to read Geant4 file",jpivarski,closed,2018-10-03T13:17:44Z,2018-10-03T14:51:02Z,1,True
+146,"ValueError maximum stop instead of StopIteration",vkuznet,closed,2018-10-01T18:10:57Z,2018-10-01T18:58:27Z,1,False
+145,"STLVector needs \"takes\" and \"to\"",jpivarski,closed,2018-09-28T20:22:05Z,2018-10-29T20:47:12Z,0,False
+144,"uproot available for conda/osx-64?",jcatmore,closed,2018-09-26T08:25:00Z,2018-09-27T09:50:33Z,5,False
+143,"Issue133",reikdas,closed,2018-09-25T19:12:26Z,2018-09-26T00:55:48Z,4,True
+142,"Move conversion code to methods",jpivarski,closed,2018-09-25T13:06:20Z,2018-09-25T13:42:16Z,0,True
+141,"Issue136",jpivarski,closed,2018-09-24T20:23:53Z,2018-09-24T20:49:17Z,0,True
+140,"Issue 124",jpivarski,closed,2018-09-20T20:12:06Z,2018-09-20T20:21:12Z,0,True
+139,"Unit tests for writing!",jpivarski,closed,2018-09-20T16:55:35Z,2019-04-01T13:54:57Z,8,False
+138,"Nested TDirectories",jpivarski,open,2018-09-20T16:53:43Z,None,2,False
+137,"More histogram, profile, and graph types",jpivarski,open,2018-09-20T16:48:17Z,None,2,False
+136,"Make uproot-written files appendable in ROOT",jpivarski,closed,2018-09-20T16:45:46Z,2018-09-24T20:42:24Z,1,False
+135,"Block management",jpivarski,open,2018-09-20T16:43:48Z,None,1,False
+134,"UUID must be properly set",jpivarski,closed,2018-09-20T16:34:43Z,2018-09-24T20:30:25Z,1,False
+133,"Datime timestamps need to be properly formatted",jpivarski,closed,2018-09-20T16:20:05Z,2018-09-26T00:55:48Z,2,False
+132,"Write custom fLabels",jpivarski,closed,2018-09-20T16:17:34Z,2019-07-17T15:49:07Z,0,False
+131,"Script to make streamers",jpivarski,closed,2018-09-20T16:14:09Z,2018-10-29T16:41:32Z,7,False
+130,"Possible regression in TH1* fSumw2?",kratsg,closed,2018-09-19T21:52:12Z,2018-09-19T22:27:48Z,12,False
+129,"Reikdas writing",jpivarski,closed,2018-09-19T20:51:01Z,2018-09-19T21:05:30Z,0,True
+128,"reading file created with GoHEP/rootio, with dirs+subdirs",sbinet,closed,2018-09-13T17:15:48Z,2018-10-29T20:48:15Z,5,False
+127,"Finish write support",reikdas,closed,2018-09-12T13:06:48Z,2018-09-20T16:09:44Z,1,False
+126,"Attempted basket-recovery fails",reikdas,closed,2018-09-12T10:14:08Z,2018-09-20T21:01:46Z,1,False
+125,"issues with JaggedArray",vkuznet,closed,2018-09-10T16:59:55Z,2018-09-10T22:55:20Z,1,False
+124,"Reading custom classes",tamasgal,closed,2018-09-10T15:23:40Z,2018-09-20T20:10:17Z,17,False
+123,"failures during install using py2.7",vkuznet,closed,2018-09-10T15:20:08Z,2018-09-10T22:46:34Z,2,False
+122,"uproot not available on conda",DylanReedy,closed,2018-08-30T22:13:26Z,2018-08-31T11:06:43Z,5,False
+121,"status of ROOT writing of histograms",lukasheinrich,closed,2018-08-28T09:59:47Z,2018-09-20T16:07:22Z,4,False
+120,"Version 3 0 awkward and writer",jpivarski,closed,2018-08-27T19:09:06Z,2018-08-27T19:28:58Z,0,True
+119,"about arrays or array functions to JaggedArray or numpy arrays",sahaskn,closed,2018-08-15T22:23:09Z,2018-08-16T18:22:49Z,5,False
+118,"Maximum recursion depth exceeded for caches",shane-breeze,closed,2018-08-15T17:20:28Z,2018-08-15T19:48:31Z,3,False
+117,"Conditional Importing of Entries",ewengillies,closed,2018-08-14T09:37:35Z,2018-08-14T11:16:32Z,10,False
+116,"ROOT file format per uproot",pibion,closed,2018-08-11T04:39:36Z,2018-08-11T11:50:47Z,2,False
+115,"Issue 110",jpivarski,closed,2018-08-07T20:25:03Z,2018-08-07T20:32:18Z,0,True
+114,"Issue 107",jpivarski,closed,2018-08-07T19:35:54Z,2018-08-07T19:42:54Z,0,True
+113,"uproot pypi package includes \"tests\" folder",kreczko,closed,2018-08-03T12:40:42Z,2018-08-07T12:53:46Z,4,False
+112,"Add parameter `namedecode` to give users names as `str`, not `bytes`.",jpivarski,closed,2018-08-03T10:02:52Z,2018-08-03T10:04:22Z,0,True
+111,"Strings encoded as bytes",GilesStrong,closed,2018-08-03T07:22:08Z,2018-08-03T10:01:57Z,1,False
+110,"PEP 519: Path protocol support",henryiii,closed,2018-07-31T09:09:44Z,2018-09-10T23:02:32Z,15,False
+109,"Better support for zero-entry trees",ponyisi,closed,2018-07-28T05:43:43Z,2018-07-28T10:27:25Z,2,False
+108,"memmap error for some (large) root files",shane-breeze,closed,2018-07-27T15:20:25Z,2018-09-14T15:36:54Z,11,False
+107,"Support for THnSparse",raymondEhlers,closed,2018-07-19T03:23:57Z,2018-08-07T19:37:05Z,12,False
+106,"fixes #104: handle empty directory",jpivarski,closed,2018-07-18T11:52:43Z,2018-07-18T12:28:03Z,0,True
+105,"Issue 102",jpivarski,closed,2018-07-18T10:14:03Z,2018-07-18T10:35:27Z,0,True
+104,"Unable to open empty ROOT file with nested directories",reikdas,closed,2018-07-17T15:44:59Z,2018-07-18T11:53:39Z,5,False
+103,"Jagged indexing",mverzett,closed,2018-07-16T13:07:07Z,2018-09-10T22:56:37Z,7,False
+102,"tree.pandas.df() with branches==None AttributeError",balarsen,closed,2018-07-15T16:31:01Z,2018-07-18T10:16:31Z,10,False
+101,"fixes issue #100: simplify construction of DataFrames",jpivarski,closed,2018-07-13T02:26:20Z,2018-07-13T02:40:01Z,1,True
+100,"Surprisingly slow loading of very simple trees compared to `root_pandas`",daritter,closed,2018-07-12T13:19:33Z,2018-07-13T02:47:29Z,4,False
+99,"optimized jagged operations",aminnj,closed,2018-07-10T19:15:05Z,2018-09-10T22:56:12Z,17,False
+98,"Should fix #96",reikdas,closed,2018-07-09T20:11:54Z,2018-07-09T20:41:43Z,4,True
+97,"Error with jagged arrays and pandas output",rob-tay,closed,2018-07-04T12:43:36Z,2018-07-04T14:24:46Z,3,False
+96,"Support for TLorentzVector not in std::vector?",imruffin,closed,2018-07-04T11:56:09Z,2018-07-04T12:57:48Z,4,False
+95,"Issue pandas flatten",jpivarski,closed,2018-07-02T16:23:27Z,2018-07-02T16:44:00Z,0,True
+94,"Issue 92",jpivarski,closed,2018-06-22T09:14:55Z,2018-06-22T17:02:05Z,7,True
+93,"Issue 92",demarley,closed,2018-06-22T07:32:51Z,2018-06-22T08:32:32Z,2,True
+92,"Two Dimensional Histograms",demarley,closed,2018-06-21T16:35:55Z,2018-06-22T17:10:31Z,5,False
+91,"Issue 90 unspec compress",jpivarski,closed,2018-06-12T20:06:33Z,2018-06-12T20:07:47Z,0,True
+90,"Unspecified Branch-level Compression",AlexSchuy,closed,2018-06-12T18:42:25Z,2018-06-12T20:04:47Z,4,False
+89,"Feature daskframe",jpivarski,closed,2018-06-07T19:46:22Z,2018-06-07T19:46:46Z,0,True
+88,"Problem with jagged arrays when creating a pandas dataframe from tree.",marinang,closed,2018-06-01T12:31:56Z,2018-06-03T13:20:59Z,6,False
+87,"TTree.array does not respect entrystop parameter when reading incomplete file",bersbersbers,closed,2018-05-30T12:17:19Z,2018-05-30T22:18:13Z,6,False
+86,"Can't set upper entry limit for pandas data frame",daniel-saunders,closed,2018-05-29T16:31:35Z,2018-05-29T16:55:26Z,3,False
+85,"fixed broken XRootD, MemoryCache accounting for remote file access",jpivarski,closed,2018-05-23T16:00:53Z,2018-05-23T16:15:32Z,0,True
+84,"Generalised asobj for all classes",reikdas,closed,2018-05-18T13:28:52Z,2018-05-18T13:46:13Z,0,True
+83,"Some branches with streamer TStreamerObject cannot be read yet",reikdas,closed,2018-05-18T11:55:41Z,2018-05-18T12:43:37Z,3,True
+82,"leaflist dtype interpretation wasn't Python 2 safe; fixed now",jpivarski,closed,2018-05-18T02:40:47Z,2018-05-18T02:53:03Z,2,True
+81,"Added path to CompressedSource",reikdas,closed,2018-05-17T19:20:18Z,2018-05-17T19:47:25Z,1,True
+80,"Fixed basket error",reikdas,closed,2018-05-14T20:43:47Z,2018-05-14T21:39:49Z,1,True
+79,"Problem reading branches with more than one basket on Windows",kandrosov,closed,2018-05-07T16:12:42Z,2018-05-14T21:39:49Z,19,False
+78,"Histograms in Trees",reikdas,closed,2018-05-06T12:31:39Z,2018-05-06T17:50:52Z,2,True
+77,"Able to read TStrings",reikdas,closed,2018-05-03T09:38:51Z,2018-05-03T13:21:24Z,3,True
+76,"Vectors of TString in a nested TTree",kreczko,closed,2018-05-02T12:01:32Z,2018-05-04T14:05:36Z,4,False
+75,"Object not in std::vector",reikdas,closed,2018-04-28T19:22:20Z,2018-05-01T21:51:55Z,6,True
+74,"TVector2 & TVector3 in a nested TTree",kreczko,closed,2018-04-23T13:13:33Z,2018-05-01T21:51:56Z,9,False
+73,"Error running tests",ktf,closed,2018-04-20T11:51:08Z,2018-04-20T12:51:18Z,6,False
+72,"trouble with bokeh instructions in README",pibion,closed,2018-04-16T21:53:45Z,2018-04-17T13:12:25Z,3,False
+71,"XRootD: I/O operation on closed file",chrisburr,closed,2018-04-15T18:00:04Z,2018-04-16T15:39:56Z,2,False
+70,"Error reading root file",imandr,closed,2018-03-30T16:31:46Z,2018-03-30T17:09:28Z,2,False
+69,"Fixing encoding",guiguem,closed,2018-03-29T02:58:37Z,2018-03-29T05:16:00Z,2,True
+68,"Encoding problem when installing",guiguem,closed,2018-03-29T01:40:10Z,2018-03-29T05:17:41Z,1,False
+67,"How do I use the object returned by countleaf ?",imandr,closed,2018-03-27T15:55:22Z,2018-03-30T17:18:52Z,1,False
+66,"'TH1D' object has no attribute 'classname'",altavir,closed,2018-03-27T11:59:16Z,2018-03-27T12:16:46Z,2,False
+65,"Does not work on windows",altavir,closed,2018-03-27T08:10:37Z,2018-03-27T12:11:02Z,25,False
+64,"Open TDirectoryFile",l-althueser,closed,2018-03-24T15:08:50Z,2018-03-24T16:48:15Z,8,False
+63,"std::string branches cannot be interpreted",douglasdavis,closed,2018-03-19T19:09:41Z,2018-03-19T19:36:53Z,2,False
+62,"Temp fixed a problem preventing JaggedArray from being pickled",asymmetry,closed,2018-03-08T23:38:43Z,2018-03-09T01:28:25Z,5,True
+61,"Iteration over files and Pandas dataframe",rdisipio,closed,2018-03-08T19:23:31Z,2018-03-08T20:49:07Z,2,False
+60,"UserWarning: attempted to read missing baskets from incompletely written file, but encountered ValueError: recovered 2 baskets, expected 1",wiso,closed,2018-03-08T11:18:15Z,2018-03-08T19:24:55Z,3,False
+59,"Use hashlib.md5 to do hash for diskcache",asymmetry,closed,2018-03-07T08:15:34Z,2018-03-07T17:27:50Z,1,True
+58,"uproot + pyroot conflict?",davidlange6,closed,2018-03-05T11:36:49Z,2018-03-05T13:51:44Z,2,False
+57,"Request support for tree branch with vector<TLorentzVector> objects",chrisjcc,closed,2018-03-01T16:28:01Z,2018-03-01T23:28:24Z,8,False
+56,"ValueError: attempting to read TAttLine object version 2 with a class generated by streamer version 1",fyuuhi,closed,2018-03-01T12:40:11Z,2018-03-03T15:56:11Z,9,False
+55,"Handle first TIOFeature bit: baskets without navigation buffers",jpivarski,closed,2018-02-21T20:49:05Z,2018-02-21T21:32:23Z,0,False
+54,"Handle tag == 1 case in _readobjany (reference to parent)",jpivarski,closed,2018-02-21T20:04:35Z,2018-02-21T20:07:29Z,0,False
+53,"Add support for list and tuple subclasses in array functions.",riga,closed,2018-02-15T10:58:26Z,2018-02-15T12:09:06Z,3,True
+52,"Fix typo in README",chrisburr,closed,2018-02-14T14:41:24Z,2018-02-14T14:48:33Z,0,True
+51,"Add Zenodo DOI",matthewfeickert,closed,2018-02-14T13:45:38Z,2018-02-14T14:39:06Z,4,False
+50,"Support opening files on the web",graipher,closed,2018-02-13T16:13:54Z,2018-02-21T20:24:42Z,2,False
+49,"directly open a TTree",wiso,closed,2018-02-01T14:40:48Z,2018-02-02T14:05:11Z,3,False
+48,"Eliminate out-of-date examples from reference documentation",jpivarski,closed,2018-01-30T17:32:27Z,2018-02-07T21:55:33Z,1,False
+47,"uproot.iterate should raise an error if a filename is missing",jpivarski,closed,2018-01-30T17:31:49Z,2018-02-07T21:58:48Z,1,False
+46,"ROOT-6.12.04 support: issue with new ROOT::TIOFeatures field in TTree",sbinet,closed,2018-01-29T15:12:41Z,2018-02-07T22:49:18Z,6,False
+45,"vector<bool> not supported",lgiommi,closed,2018-01-23T14:56:35Z,2018-01-24T18:48:03Z,4,False
+44,"Problem with iterate function",lgiommi,closed,2018-01-20T16:41:55Z,2018-01-20T23:45:42Z,6,False
+43,"Fail to construct JaggedArray",vkuznet,closed,2018-01-12T19:07:54Z,2018-01-12T20:43:36Z,6,False
+42,"Error while reading vector",ram1123,closed,2018-01-03T04:19:16Z,2018-01-03T11:49:51Z,1,False
+41,"Speed improvements and numba jit failures",vkuznet,closed,2017-12-21T13:55:59Z,2017-12-21T16:24:43Z,2,False
+40,"Cache bug while reading array of data",vkuznet,closed,2017-12-21T13:44:15Z,2017-12-21T16:39:15Z,1,False
+39,"Support for nested vectors",dguest,closed,2017-12-21T12:57:47Z,2018-03-03T16:25:54Z,9,False
+38,"Unable to read ntuple with std::vector after doing 'hadd'",jiafulow,closed,2017-12-19T02:08:20Z,2017-12-19T13:29:08Z,13,False
+37,"Getting branch type and shape without reading data",imandr,closed,2017-12-15T17:29:07Z,2017-12-15T17:51:36Z,1,False
+36,"Unable to open GEN-SIM-DIGI-RAW via xrootd interface",vkuznet,closed,2017-12-11T13:03:54Z,2017-12-11T21:29:08Z,1,False
+35,"Unable to open GEN-SIM-DIGI-RAW file",vkuznet,closed,2017-12-11T13:02:23Z,2017-12-11T14:18:59Z,3,False
+34,"NameError: global name 'data' is not defined",kpedro88,closed,2017-12-08T21:12:00Z,2017-12-11T22:51:50Z,1,False
+33,"Handle TH1 w/ labeled bins",kpedro88,closed,2017-12-08T20:27:37Z,2017-12-11T23:38:28Z,6,False
+32,"Interpret std::vector<std::string>",kpedro88,closed,2017-12-08T20:24:56Z,2018-02-07T22:01:59Z,2,False
+31,"Unable to read char* fields in objects",wdconinc,closed,2017-12-05T23:16:08Z,2017-12-06T12:56:01Z,3,False
+30,"uproot.open crashing with hadded file as input, TypeError: ord() expected string of length 1, but int found",douglasdavis,closed,2017-12-05T21:05:34Z,2017-12-05T21:43:13Z,4,False
+29,"Histograms and functional chains.",jpivarski,closed,2017-12-05T20:57:29Z,2017-12-05T20:57:47Z,0,True
+28,"Underscores in branch/leaf names are not accepted",wdconinc,closed,2017-12-05T19:49:02Z,2017-12-05T22:35:35Z,3,False
+27,"Jagged array elements without fLeafCount",imandr,closed,2017-12-01T19:11:49Z,2017-12-01T19:14:49Z,3,False
+26,"Uninterpreted fields in the CMS dark matter search dataset",imandr,closed,2017-12-01T18:39:37Z,2018-02-08T16:54:32Z,2,False
+25,"Cache should apply to whole array",jpivarski,closed,2017-11-29T18:57:07Z,2017-11-29T18:57:32Z,0,True
+24,"Some branches cause numpy broadcast errors",imandr,closed,2017-11-29T16:20:38Z,2017-11-29T16:59:54Z,8,False
+23,"finished DataFrame connector",jpivarski,closed,2017-11-28T23:30:30Z,2017-11-28T23:33:09Z,0,True
+22,"TBasket partial write recovery",jpivarski,closed,2017-11-28T22:02:04Z,2017-11-28T22:10:27Z,0,True
+21,"cannot open tree with 0 baskets",wiso,closed,2017-11-28T07:58:25Z,2017-11-28T12:36:25Z,21,False
+20,"Stl vector of numbers",jpivarski,closed,2017-11-27T18:40:11Z,2017-11-27T18:41:48Z,0,True
+19,"Python3 can't convert branches with multiple leafs, Python2 seems to work",kdbartlett,closed,2017-11-20T19:08:07Z,2017-11-20T20:08:42Z,2,False
+18,"didn't remove the entry id dependence of the cache, but did add some tests",jpivarski,closed,2017-11-13T16:08:49Z,2017-11-13T16:09:51Z,0,True
+17,"uproot 2.0.0",jpivarski,closed,2017-11-10T22:41:01Z,2017-11-10T22:51:59Z,0,True
+16,"Error while readin AOD file",vkuznet,closed,2017-11-04T00:12:48Z,2017-11-04T10:42:20Z,4,False
+15,"Unable to find/read data",vkuznet,closed,2017-11-03T21:01:06Z,2017-11-03T22:16:15Z,5,False
+14,"Incorrect number of entries returned by uproot",chrisburr,closed,2017-10-19T20:15:29Z,2017-11-03T15:51:25Z,8,False
+13,"Add default argument for pandas.df",wiso,closed,2017-10-19T09:12:19Z,2017-11-03T15:52:59Z,1,True
+12,"Cache classes",jpivarski,closed,2017-10-18T16:12:09Z,2017-10-18T16:13:50Z,0,True
+11,"Uproot now has hooks to Arrowed, a project that doesn't exist.",jpivarski,closed,2017-10-06T13:06:40Z,2017-10-06T13:09:06Z,0,True
+10,"Correct license comment in all files",eduardo-rodrigues,closed,2017-10-03T08:59:45Z,2017-10-06T13:18:39Z,1,False
+9,"Low level baskets interface",jpivarski,closed,2017-09-21T19:21:53Z,2017-09-21T19:22:01Z,0,True
+8,"tests/HZZ*.root typo in Photon_E branch descriptor",sbinet,closed,2017-09-21T08:19:17Z,2017-10-06T12:50:40Z,1,False
+7,"fix string reading and add dummy TList so that we can look at CMS RECO files",jpivarski,closed,2017-09-20T17:50:45Z,2017-09-20T17:57:26Z,0,True
+6,"enter/exit for uproot.open",jpivarski,closed,2017-09-20T17:03:42Z,2017-09-20T17:59:15Z,0,True
+5,"index out of bound",vkuznet,closed,2017-09-19T17:00:30Z,2017-09-20T17:56:02Z,4,False
+4,"uproot.open should implement support for with statement",vkuznet,closed,2017-09-19T16:55:09Z,2017-09-20T17:19:10Z,1,False
+3,"added help strings to everything",jpivarski,closed,2017-09-15T22:31:43Z,2017-09-15T22:31:50Z,0,True
+2,"Add iterator interface",jpivarski,closed,2017-09-15T20:31:17Z,2017-09-15T20:31:25Z,0,True
+1,"Create LICENSE",jpivarski,closed,2017-09-13T21:45:22Z,2017-09-13T21:45:29Z,0,True

@@ -1,0 +1,193 @@
+number,title,user,state,date_created,date_closed,numcomments,ispull
+192,"Trouble interacting with numba",OracPrime,closed,2019-09-17T15:27:48Z,2019-09-17T15:39:47Z,4,False
+191,"Fixes issue #190.",jpivarski,closed,2019-09-16T16:30:20Z,2019-09-16T16:43:32Z,0,True
+190,"JaggedArray.pad fails when content is empty",benkrikler,closed,2019-09-13T16:41:46Z,2019-09-16T16:45:26Z,2,False
+189,"overlapping names when saving",aminnj,closed,2019-09-12T22:05:24Z,2019-09-14T01:46:07Z,7,False
+188,"Fix iteration over Rows",masonproffitt,closed,2019-09-10T16:02:54Z,2019-09-16T20:37:02Z,3,True
+187,"Make awkward.topandas(exoplanets, flatten=True) work.",jpivarski,closed,2019-09-10T14:22:54Z,2019-09-10T14:44:30Z,0,True
+186,"Jagged indexing doesn't work for ChunkedArrays",masonproffitt,open,2019-09-10T08:49:55Z,None,0,False
+185,"count() method usage description",mverzett,closed,2019-09-05T16:31:14Z,2019-09-05T16:56:43Z,1,False
+184,"Make sure that classes generated on the fly are pickleable.",jpivarski,closed,2019-08-31T17:47:37Z,2019-08-31T18:28:55Z,0,True
+183,"Consider using simdjson",lemire,closed,2019-08-26T14:12:02Z,2019-08-26T14:23:53Z,1,False
+182,"Add ndim property and fix empty chunk return",douglasdavis,closed,2019-08-22T20:02:40Z,2019-08-27T19:45:38Z,5,True
+181,"virtual/base/chunked array crash going through uproot.daskframe",douglasdavis,closed,2019-08-22T15:47:38Z,2019-08-22T20:03:38Z,8,False
+180,"argcross() problems with ChunkedArray",masonproffitt,open,2019-08-15T22:38:13Z,None,0,False
+179,"Fix len of ChunkedArray after chunksizes changes",masonproffitt,closed,2019-08-15T15:21:02Z,2019-08-15T20:04:51Z,0,True
+178,"broken __repr__ on ObjectArrays from ChunkedArrays and inconsistent behavior of choose()",lukasheinrich,open,2019-08-12T01:25:09Z,None,1,False
+177,"Issue 176",jpivarski,closed,2019-08-06T13:06:17Z,2019-08-06T13:54:42Z,0,True
+176,"JaggedArray.argmax() returns multiple values for some events",benkrikler,closed,2019-08-06T12:26:15Z,2019-08-06T13:06:55Z,4,False
+175,"Make sure to return an correct type from argmin/max when input is empty",nsmith-,closed,2019-08-01T04:50:09Z,2019-08-01T17:40:42Z,1,True
+174,"Fix issue #172",jpivarski,closed,2019-07-31T15:30:13Z,2019-07-31T16:39:25Z,2,True
+173,"[WIP] continuing CPU methods to be used (for now) in C++",EscottC,open,2019-07-31T01:23:38Z,None,0,True
+172,"Can't use gather operation on a filtered array",beojan,closed,2019-07-30T14:52:43Z,2019-07-31T16:39:58Z,28,False
+171,"Adapt for Numpy 1.17.0",jpivarski,closed,2019-07-29T10:21:53Z,2019-07-29T10:40:07Z,3,True
+170,"Numpy 1.17.0 causes all JaggedArray.from*() functions to fail for python lists",lgray,closed,2019-07-29T00:15:01Z,2019-07-29T10:24:07Z,3,False
+169,"Unable to serialize/save TLorentzVectorArray",masonproffitt,closed,2019-07-23T18:55:13Z,2019-08-31T17:56:04Z,7,False
+168,"finishing __getitem__ methods in C++ JaggedArray",EscottC,closed,2019-07-19T23:46:23Z,2019-07-31T01:13:49Z,12,True
+167,"allow assignment within JaggedArray by boolean or integer indexing",masonproffitt,closed,2019-07-19T15:29:09Z,2019-07-24T20:57:29Z,8,True
+166,"Behavior of .all() is not consistent with numpy",masonproffitt,closed,2019-07-19T02:23:22Z,2019-07-24T21:17:06Z,6,False
+165,"Don't let JaggedArray.fromoffsets construct from a view",nsmith-,closed,2019-07-18T00:27:22Z,2019-07-18T08:50:26Z,0,True
+164,"Stop recursing on multi-d slicing if remaining jagged array is empty",nsmith-,closed,2019-07-17T21:52:59Z,2019-07-18T08:46:52Z,0,True
+163,"Multi-d slicing breaks on empty jagged arrays",nsmith-,closed,2019-07-17T21:50:31Z,2019-07-18T08:46:52Z,0,False
+162,"implementing jagged array CPU functions",EscottC,closed,2019-07-17T04:38:34Z,2019-07-19T23:36:25Z,2,True
+161,"ChunkedArray ufunc bug",nsmith-,open,2019-07-16T00:38:10Z,None,1,False
+160,"Implement jagged argsort and speed up argminmax",nsmith-,closed,2019-07-15T21:29:19Z,2019-07-17T00:40:45Z,9,True
+159,"add an axis parameter to the pad method",jpivarski,closed,2019-07-12T15:29:48Z,2019-07-14T12:39:50Z,0,True
+158,"JaggedArray.argmax() errors for zero-length entries even if max() works",AndreasAlbert,closed,2019-07-09T20:19:25Z,2019-07-09T21:33:14Z,4,False
+157,"comparison with tensorflow ragged tensors",aminnj,closed,2019-07-05T00:26:00Z,2019-07-05T01:49:23Z,2,False
+156,"[WIP] more JaggedArray.__getitem__ cases in awk-cpp",EscottC,closed,2019-06-27T21:09:02Z,2019-07-17T04:27:28Z,29,True
+155,"Return JaggedArray index with correct dtype if empty",nsmith-,closed,2019-06-27T20:04:33Z,2019-06-27T20:28:31Z,0,True
+154,"Fix choose on non-offsetsaliased jagged arrays",nsmith-,closed,2019-06-25T23:31:35Z,2019-06-26T23:06:59Z,12,True
+153,"[WIP] Collaborate on jaggedarray cpp",jpivarski,closed,2019-06-25T18:11:17Z,2019-06-27T21:04:11Z,14,True
+152,"Proposal: class-ify persists.serialize",bfis,closed,2019-06-24T14:19:03Z,2019-06-27T11:02:54Z,10,True
+151,"Boolean indexing fix",masonproffitt,closed,2019-06-20T15:27:24Z,2019-06-20T17:25:58Z,0,True
+150,"JaggedArray.tojagged(999) returns None",jpivarski,closed,2019-06-19T19:43:54Z,2019-07-09T11:58:56Z,0,False
+149,"Concatenating two jagged arrays",mat-adamec,closed,2019-06-19T19:12:00Z,2019-07-09T11:42:25Z,5,False
+148,"[array] tojagged: fixed compactness condition",Nollde,closed,2019-06-19T10:43:49Z,2019-06-19T11:47:36Z,1,True
+147,"Update appveyor.yml",nsmith-,closed,2019-06-17T21:24:29Z,2019-06-20T01:34:14Z,2,True
+146,"[WIP] Table in awk-cpp",Danbo3004,open,2019-06-17T16:21:52Z,None,3,True
+145,"Work-around Numpy's ufunc.reduceat",jpivarski,closed,2019-06-17T15:48:41Z,2019-06-17T16:31:40Z,0,True
+144,"Awkward array throws an error when masking a jagged table by its own member",lgray,closed,2019-06-17T14:36:19Z,2019-06-17T15:49:02Z,6,False
+143,"Releasing precompiled binaries of awkward-cpp",jpivarski,open,2019-06-15T00:26:51Z,None,7,False
+142,"coordinated CMS NanoAOD release",jpivarski,closed,2019-06-13T19:46:19Z,2019-06-14T21:25:59Z,0,True
+141,"Jagged Numba: indexing beyond the last non-empty subarray raises error",jpivarski,closed,2019-06-07T22:04:56Z,2019-07-09T11:56:20Z,0,False
+140,"Fix JaggedArray._reduce() when content goes past last offset",masonproffitt,closed,2019-06-04T14:04:37Z,2019-06-04T15:35:14Z,1,True
+139,"Add unzip functionality for tables and arrays",masonproffitt,closed,2019-06-02T11:07:43Z,2019-06-14T20:52:43Z,4,True
+138,"Fix iteration over Row elements",masonproffitt,closed,2019-06-02T01:16:43Z,2019-06-11T10:23:30Z,3,True
+137,"JaggedArrays in awk-cpp",EscottC,closed,2019-05-31T19:08:04Z,2019-06-25T17:26:36Z,42,True
+136,"let's get some real documentation",jpivarski,closed,2019-05-29T17:04:57Z,2019-07-08T23:19:36Z,3,True
+135,"lazyarrays and zip",nsmith-,open,2019-05-29T00:24:40Z,None,5,False
+134,"Can't use MaskedArray when indexing another array",andrzejnovak,closed,2019-05-27T13:56:45Z,2019-07-09T11:52:14Z,3,False
+133,"fixes for LPC HATS",jpivarski,closed,2019-05-25T19:07:11Z,2019-05-27T01:36:51Z,0,True
+132,"Issue arrowbuffers toobig",jpivarski,closed,2019-05-23T17:15:53Z,2019-05-23T17:43:26Z,0,True
+131,"Awkward lazyarrays",jpivarski,closed,2019-05-20T21:13:07Z,2019-05-20T21:52:18Z,1,True
+130,"index dtype error in compact",jpata,closed,2019-05-15T21:56:36Z,2019-05-15T22:04:42Z,3,False
+129,"fix for creating TLorentzVectorArray from JaggedArray slices",masonproffitt,closed,2019-05-07T03:38:24Z,2019-05-07T15:01:29Z,1,True
+128,"IndexError when creating TLorentzVectorArray from JaggedArray slices",masonproffitt,closed,2019-05-07T03:26:41Z,2019-05-07T15:01:50Z,1,False
+127,"JaggedArray.concatenate axis=1 fails for empty arrays",nsmith-,closed,2019-04-19T16:40:50Z,2019-07-10T16:44:06Z,6,False
+126,"Fixes #125",jpivarski,closed,2019-04-16T15:57:54Z,2019-04-16T20:22:35Z,0,True
+125,"Crash when slicing JaggedArray containing a ndarray",mverzett,closed,2019-04-16T13:51:12Z,2019-04-16T17:34:16Z,3,False
+124,"Remove duplicate compact and iscompact in jagged",guitargeek,closed,2019-04-14T00:14:03Z,2019-04-14T01:16:50Z,1,True
+123,"Added missing return",bfis,closed,2019-04-12T08:16:06Z,2019-04-12T13:42:09Z,1,True
+122,"Receive wrapjagged functionality from uproot-methods",guitargeek,closed,2019-04-11T22:49:07Z,2019-04-12T01:34:33Z,4,True
+121,"Simplify all license messages to point to a central location.",jpivarski,closed,2019-04-11T18:04:46Z,2019-04-11T18:44:06Z,0,True
+120,"More general unit test for Lorentz vector array concatenation",guitargeek,closed,2019-04-11T15:09:16Z,2019-04-11T17:38:54Z,6,True
+119,"awkward-pybind11 proposal",EscottC,closed,2019-04-10T18:40:53Z,2019-05-31T18:28:28Z,3,True
+118,"Awkward-array style concatenate for Table",pfackeldey,closed,2019-04-09T12:26:38Z,2019-04-11T10:50:03Z,2,True
+117,"JaggedArray.concatenate (axis 0 and 1) for ObjectArrays with Tables",guitargeek,closed,2019-04-06T17:42:18Z,2019-04-07T19:19:01Z,1,True
+116,"Attaching new columns",mverzett,closed,2019-04-02T15:16:29Z,2019-04-04T08:22:43Z,5,False
+115,"Tables should have an unzip method; all arrays should pass it down",jpivarski,closed,2019-03-29T22:26:57Z,2019-07-02T12:38:48Z,1,False
+114,"Consistency in awkward.save, awkward.toparquet argument order",jpivarski,closed,2019-03-29T12:36:57Z,2019-03-29T14:47:31Z,0,True
+113,"Copy the OAMap Parquet samples and make awkward.arrow.fromparquet tests",jpivarski,open,2019-03-28T15:48:52Z,None,0,False
+112,"The awkward.arrow.toparquet function should take a filename as first argument",jpivarski,closed,2019-03-28T15:27:29Z,2019-03-29T14:59:42Z,1,False
+111,"All awkward types should have a \"regular\" method",jpivarski,closed,2019-03-26T15:35:30Z,2019-07-09T11:44:09Z,1,False
+110,"Use ufunc's where keyword argument in MaskedArray.__array_ufunc__",jpivarski,open,2019-03-26T14:24:12Z,None,0,False
+109,"JaggedArray slicing out of bounds",zhenbinwu,closed,2019-03-25T20:24:08Z,2019-03-25T20:28:40Z,2,False
+108,"Implement pad and fillna",jpivarski,closed,2019-03-25T15:18:58Z,2019-03-25T20:05:00Z,1,True
+107,"performance of idiomatic expressions",jpata,closed,2019-03-21T14:55:32Z,2019-07-09T11:49:05Z,7,False
+106,"[WIP] GPU backend attempt",jpata,closed,2019-03-21T03:57:00Z,2019-04-12T01:35:58Z,3,True
+105,"Guard against zero-length permutations in IndexedArray",nsmith-,closed,2019-03-15T14:29:02Z,2019-03-15T15:20:26Z,8,True
+104,"JaggedArray.tojagged does not handle empty arrays",nsmith-,closed,2019-03-15T14:21:56Z,2019-03-15T15:20:26Z,0,False
+103,"Indexing of multi-dimensional jagged arrays",mverzett,closed,2019-03-13T16:26:19Z,2019-07-09T11:48:06Z,12,False
+102,"Add argchoose function to jagged array",nsmith-,closed,2019-03-12T23:47:47Z,2019-04-01T22:38:56Z,5,True
+101,"fix issues related to scikit-hep/uproot-methods#44 and scikit-hep/awkward-array#100",jpivarski,closed,2019-03-10T07:09:58Z,2019-03-10T08:40:10Z,1,True
+100,"Error when taking max of empty array",areinsvo,closed,2019-03-10T06:43:25Z,2019-03-10T08:31:39Z,1,False
+99,"Clean up any issues of losing table keys after masking or indexing",jpivarski,closed,2019-03-09T12:39:29Z,2019-03-09T21:24:07Z,5,True
+98,"Table: cannot create an OBJECT array from memory buffer",zhenbinwu,closed,2019-03-09T02:26:20Z,2019-03-09T12:46:12Z,13,False
+97,"Fixes #92: all awkward arrays now have an nbytes parameter",jpivarski,closed,2019-03-08T20:58:20Z,2019-03-09T09:02:28Z,0,True
+96,"Need a low-level type infrastructure",jpivarski,closed,2019-03-08T18:26:27Z,2019-07-09T11:43:13Z,1,False
+95,"Nested table filtering",mverzett,closed,2019-03-08T16:31:41Z,2019-03-08T17:03:29Z,5,False
+94,"JaggedArray._broadcast should accept scalars and any AwkwardArray",jpivarski,closed,2019-03-08T12:53:55Z,2019-03-09T12:50:37Z,2,False
+93,"Filter function on JaggedArrays",zhenbinwu,closed,2019-03-08T02:06:11Z,2019-03-09T12:54:54Z,4,False
+92,"All awkward arrays must have a `nbytes` property",jpivarski,closed,2019-03-07T23:17:21Z,2019-03-08T21:00:49Z,1,False
+91,"Convert awkward arrays to Arrow",jpivarski,closed,2019-03-07T08:38:39Z,2019-03-08T15:25:55Z,15,True
+90,"JaggedArray.nth_fill([0, 1, 5], 999) \u2192 [0.0, 1.1, 5.5], [999, 999, 999], [0, 100, 500]]",jpivarski,closed,2019-03-04T18:52:52Z,2019-03-25T19:49:37Z,12,False
+89,"JaggedArray._broadcast should have a public form",jpivarski,closed,2019-03-04T18:18:26Z,2019-03-09T13:45:05Z,2,False
+88,"awkward-arrays \u2192 Arrow buffers",jpivarski,closed,2019-02-28T21:59:04Z,2019-03-08T19:48:41Z,1,False
+87,"Awkward arrays in Pandas",jpivarski,closed,2019-02-27T16:29:19Z,2019-06-14T20:14:46Z,28,True
+86,"implement AwkwardArray.check_prop_valid and AwkwardArray.check_whole_valid",jpivarski,closed,2019-02-26T21:40:51Z,2019-02-26T23:08:09Z,1,True
+85,"Boosting by sum",beojan,closed,2019-02-26T11:50:56Z,2019-02-26T14:25:08Z,3,False
+84,"Equivalent of numpy.where for awkward arrays",jpivarski,open,2019-02-22T19:41:02Z,None,2,False
+83,"Awkward arrays in Numba",jpivarski,closed,2019-02-14T21:20:46Z,2019-04-11T21:44:12Z,1,True
+82,"Still wrong return values when masking (see #50)",bhgomes,closed,2019-02-13T06:11:52Z,2019-02-13T12:19:50Z,4,False
+81,"Sorting",guitargeek,closed,2019-02-10T18:09:39Z,2019-07-17T00:40:45Z,4,False
+80,"Implemented JaggedArray.concatenate(axis=1)",guitargeek,closed,2019-02-09T14:31:08Z,2019-02-27T16:20:51Z,6,True
+79,"make the JaggedArray.zip method no longer broken",jpivarski,closed,2019-02-07T16:04:55Z,2019-02-07T17:02:42Z,0,True
+78,"Add int64 signature to numba njit",lgray,closed,2019-02-06T18:20:41Z,2019-02-06T18:39:42Z,1,True
+77,"Modifications to speed up recurse in when certain information is known",lgray,closed,2019-02-05T21:02:34Z,2019-02-05T21:58:01Z,1,True
+76,"Add float32 signatures to numba njits",lgray,closed,2019-02-04T20:12:29Z,2019-02-04T20:36:48Z,1,True
+75,"fixed missing Numbaness on __getitem__[string]",jpivarski,closed,2019-02-01T21:37:47Z,2019-02-01T22:01:15Z,0,True
+74,"remove more dependences on global awkwardlib/numpy",jpivarski,closed,2019-01-29T22:39:59Z,2019-01-29T23:41:32Z,0,True
+73,"make jagged_array work with numba.jit(nopython=True)",HDembinski,closed,2019-01-29T12:39:08Z,2019-07-09T11:47:24Z,6,False
+72,"Implement direct argdistincts calculation",nsmith-,closed,2019-01-28T04:24:17Z,2019-01-28T14:01:01Z,2,True
+71,"README.rst installation path is wrong",susanwl,closed,2019-01-27T03:40:38Z,2019-01-28T00:37:32Z,6,False
+70,"Overriding subpackages",jpivarski,closed,2019-01-25T21:35:52Z,2019-01-29T18:33:56Z,19,True
+69,"Max is broken",henryiii,closed,2019-01-18T10:28:45Z,2019-01-18T19:24:22Z,1,False
+68,"Allow older awkwardarrys to be read in from hdf5",henryiii,closed,2019-01-18T10:17:24Z,2019-01-18T19:16:37Z,1,True
+67,"Reading hdf5 and older schemas",henryiii,closed,2019-01-18T10:12:26Z,2019-01-18T19:13:50Z,4,False
+66,"Fix error sent by email",jpivarski,closed,2019-01-17T15:41:20Z,2019-01-17T15:57:20Z,1,True
+65,"Implement nested parquet writing",martindurant,closed,2019-01-14T14:23:56Z,2019-07-09T11:44:40Z,1,False
+64,"[skip ci] Implementation of awkward-numba package.",DumbMachine,closed,2019-01-10T16:47:06Z,2019-01-25T19:21:22Z,9,True
+63,"Proposal: jit-compilation if numba available",nsmith-,closed,2019-01-08T23:59:56Z,2019-07-09T11:45:34Z,1,False
+62,"Forbid in place operations",jpivarski,closed,2019-01-04T22:51:46Z,2019-01-04T23:02:59Z,0,True
+61,"Issue 59",jpivarski,closed,2018-12-13T02:41:51Z,2018-12-13T03:03:49Z,0,True
+60,"Feature particle matching example",jpivarski,closed,2018-12-12T22:24:06Z,2018-12-12T23:08:09Z,0,True
+59,"numpy functions on jagged arrays don't produce compatible arrays",jpata,closed,2018-12-12T20:59:11Z,2018-12-13T03:03:50Z,10,False
+58,"Tuples of lists of indices does not work as in numpy",lgray,closed,2018-12-10T21:19:03Z,2018-12-11T05:03:12Z,7,False
+57,"Feature generate fromiter",jpivarski,closed,2018-12-08T13:58:46Z,2018-12-08T22:23:08Z,0,True
+56,"Issue 51 (slowdowns) still alive for TLorentzVectors",lgray,closed,2018-12-03T13:59:17Z,2018-12-12T21:52:57Z,9,False
+55,"Cannot perform nested ufunc math on jagged arrays",lgray,closed,2018-12-03T11:35:41Z,2018-12-03T12:10:58Z,5,False
+54,"Fix boolean jagged array reductions (`any` and `all`) when `_canuseoffset()`",benkrikler,closed,2018-12-03T05:43:34Z,2018-12-03T14:13:23Z,2,True
+53,"Bad dtype specification for `JaggedArray.any` and `JaggedArray.all`",benkrikler,closed,2018-12-03T05:43:21Z,2018-12-03T14:13:44Z,0,False
+52,"Issue 51",jpivarski,closed,2018-12-03T00:37:23Z,2018-12-03T00:48:35Z,0,True
+51,"Slow accessor in nested jagged table",nsmith-,closed,2018-12-02T14:57:47Z,2018-12-03T00:37:56Z,4,False
+50,"Issue 49",jpivarski,closed,2018-11-30T19:21:13Z,2018-11-30T20:39:27Z,0,True
+49,"Wrong return values when masking?",lgray,closed,2018-11-30T15:24:06Z,2018-11-30T19:29:40Z,1,False
+48,"Issue empty pairs drops columns",jpivarski,closed,2018-11-29T19:37:22Z,2018-11-29T20:03:04Z,0,True
+47,"JaggedArray second dimension fancy indexing",jpivarski,closed,2018-11-28T19:04:34Z,2018-11-28T20:44:14Z,1,False
+46,"cross, pairs, distincts must share column numbers",jpivarski,closed,2018-11-28T17:28:11Z,2018-11-28T20:07:15Z,1,False
+45,"Issues 36 44",jpivarski,closed,2018-11-28T17:26:35Z,2018-11-28T21:55:39Z,2,True
+44,"flatten an empty jagged array",jpivarski,closed,2018-11-28T16:40:44Z,2018-11-28T17:27:11Z,1,False
+43,"__getitem__ string handling with maybemixin of self.__class__ mixed t\u2026",jpivarski,closed,2018-11-28T15:10:33Z,2018-11-28T15:30:02Z,1,True
+42,"follow-up on PR #37, applying the same logic to all awkward classes",jpivarski,closed,2018-11-27T14:03:43Z,2018-11-27T20:12:17Z,0,True
+41,"Issue 38",jpivarski,closed,2018-11-27T13:28:58Z,2018-11-27T13:40:38Z,0,True
+40,"implemented `astype` for all array classes",jpivarski,closed,2018-11-27T12:55:28Z,2018-11-27T13:39:30Z,0,True
+39,"Feature request: astype",henryiii,closed,2018-11-27T11:11:57Z,2018-11-27T13:00:06Z,1,False
+38,"Jagged array reductions fail after masking on first dimension",benkrikler,closed,2018-11-27T04:51:24Z,2018-11-27T13:29:11Z,2,False
+37,"Pass method mixins through JaggedArray __getitem__",nsmith-,closed,2018-11-21T16:24:08Z,2018-11-27T13:44:34Z,1,True
+36,"argpairs behavior not as expected",nsmith-,closed,2018-11-20T23:15:44Z,2018-11-28T17:27:00Z,3,False
+35,"Issue 33",jpivarski,closed,2018-11-19T21:39:13Z,2018-11-19T22:28:56Z,1,True
+34,"Resolves issue #31",jpivarski,closed,2018-11-19T16:30:42Z,2018-11-19T18:00:10Z,0,True
+33,"JaggedArray.pairs fails for n>=24",nsmith-,closed,2018-11-19T02:22:56Z,2018-11-19T21:42:58Z,3,False
+32,"Fixed concat and concatenate",guitargeek,closed,2018-11-15T18:59:29Z,2018-11-19T19:37:08Z,8,True
+31,"accessing columns with JaggedArray elements without a for loop",pibion,closed,2018-11-14T14:49:34Z,2018-11-19T18:04:04Z,6,False
+30,"Interfacing between pandas Muiltiindex dataframe and JaggedArrays",shane-breeze,closed,2018-11-11T20:21:56Z,2018-11-11T21:00:14Z,9,False
+29,"Feature persist table views",jpivarski,closed,2018-11-01T15:41:17Z,2018-11-01T16:01:31Z,0,True
+28,"Issue 24",jpivarski,closed,2018-10-29T21:07:29Z,2018-10-29T21:28:45Z,0,True
+27,"Issue 15",jpivarski,closed,2018-10-29T20:45:19Z,2018-10-29T21:07:07Z,0,True
+26,"fixes #19: implement __array__ with fromiter (usually) or array(list(self)) to invoke the iterator",jpivarski,closed,2018-10-29T20:16:34Z,2018-10-29T20:44:16Z,0,True
+25,"Subschemas in serialization",jpivarski,closed,2018-10-29T11:21:10Z,2019-07-09T11:45:19Z,0,False
+24,"In serialization, check for tojson, fromjson methods on the object",jpivarski,closed,2018-10-29T11:12:23Z,2018-10-29T21:07:42Z,1,False
+23,"Fixing tuple check for persist",henryiii,closed,2018-10-28T15:22:48Z,2018-10-29T19:27:44Z,0,True
+22,"Adding test for hdf5",henryiii,closed,2018-10-28T14:48:01Z,2018-10-29T19:57:17Z,7,True
+21,"Append missing",henryiii,closed,2018-10-26T22:20:06Z,2018-10-29T19:41:30Z,6,False
+20,"Types need a suite of unit tests",jpivarski,closed,2018-10-26T19:22:38Z,2019-07-09T11:44:56Z,0,False
+19,"numpy.array(jaggedarray) causes infinite loop",jpivarski,closed,2018-10-26T19:20:56Z,2018-10-29T20:16:59Z,4,False
+18,"Feature arrow",jpivarski,closed,2018-10-26T16:27:23Z,2018-10-26T19:09:11Z,0,True
+17,"Saving a jagged array",henryiii,closed,2018-10-25T13:43:00Z,2018-10-25T17:41:27Z,13,False
+16,"Documentation on Jagged array",henryiii,closed,2018-10-25T13:28:14Z,2018-10-26T16:27:38Z,1,False
+15,"UnionArray or maybe SparseArray computes incorrect ufuncs",jpivarski,closed,2018-10-24T21:21:10Z,2018-10-29T20:45:30Z,1,False
+14,"persistence",jpivarski,closed,2018-10-24T21:04:51Z,2018-10-24T21:24:15Z,0,True
+13,"Conversion of JaggedArray to numpy array broken",kreczko,closed,2018-10-24T18:28:38Z,2018-10-24T20:08:55Z,3,False
+12,"fix fromtags order of operations, closing #8",jpivarski,closed,2018-10-16T12:18:01Z,2018-10-16T12:53:49Z,0,True
+11,"implemented fromindex (fromsubentry), closing #10",jpivarski,closed,2018-10-16T11:47:57Z,2018-10-16T12:17:03Z,0,True
+10,"Add a `fromsubentry` helper method to JaggedArray",benkrikler,closed,2018-10-16T01:13:38Z,2018-10-16T11:53:44Z,3,False
+9,"awkward-array of TLorentzVectors from numpy arrays",dguest,closed,2018-10-15T07:51:34Z,2018-10-15T11:50:16Z,1,False
+8,"test_union_ufunc is flaky",felixonmars,closed,2018-10-14T10:07:44Z,2018-10-16T12:18:47Z,2,False
+7,"Finish implementation",jpivarski,closed,2018-10-12T16:59:37Z,2018-10-12T17:02:33Z,0,True
+6,"First 0.1.x release: jagged, table, object, indexed, and chunked are done",jpivarski,closed,2018-10-04T17:15:21Z,2018-10-04T18:13:34Z,0,True
+5,"ObjectArray needs flatten()",jpivarski,closed,2018-09-28T20:42:03Z,2018-10-29T20:46:20Z,1,False
+4,"awkward.type.Type should have a representation made out of Python builtin types",jpivarski,closed,2018-09-28T20:28:52Z,2018-10-29T20:46:46Z,0,False
+3,"Add combinations 2",jpivarski,closed,2018-07-12T11:31:05Z,2018-07-12T11:44:18Z,0,True
+2,"Fixed typo",reikdas,closed,2018-07-11T16:28:39Z,2018-07-12T05:50:14Z,0,True
+1,"Add combinations",Jayd-1234,closed,2018-06-28T13:34:39Z,2018-07-12T11:33:53Z,3,True

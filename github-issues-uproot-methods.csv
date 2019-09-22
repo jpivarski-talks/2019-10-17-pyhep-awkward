@@ -1,0 +1,67 @@
+number,title,user,state,date_created,date_closed,numcomments,ispull
+66,"Fixes scikit-hep/awkward-array#169",jpivarski,closed,2019-08-31T17:39:29Z,2019-08-31T18:06:14Z,0,True
+65,"fix TH1 repr when _fName attr is not set",phylsix,closed,2019-08-29T14:35:10Z,2019-08-29T16:27:28Z,1,True
+64,"rotate methods for TVector2(Array), addressing #61",phylsix,closed,2019-08-19T22:18:53Z,2019-08-19T23:40:56Z,2,True
+63,"Maybe fixes issue #62.",jpivarski,open,2019-08-19T11:46:55Z,None,0,True
+62,"boosting 4-vectors does not work on TLorentzVectorArray",lukasheinrich,open,2019-08-18T17:06:51Z,None,1,False
+61,"rotate method for TVector2 and TVector2Array",phylsix,closed,2019-08-17T01:16:23Z,2019-08-19T23:43:24Z,2,False
+60,"Fix resolving TH2D from numpy.histogram2d or numpy.histogramdd",lmohrmann,closed,2019-08-06T08:54:35Z,2019-08-06T12:32:44Z,3,True
+59,"Generalize \"pandas\" method to support TH2",guitargeek,closed,2019-08-01T14:32:01Z,2019-08-02T17:12:10Z,10,True
+58,"coordinated CMS NanoAOD release",jpivarski,closed,2019-06-13T19:46:28Z,2019-06-14T22:40:20Z,0,True
+57,"prepare for LPC HATS in all three libraries",jpivarski,closed,2019-05-26T22:05:34Z,2019-05-27T01:37:04Z,0,True
+56,"Awkward lazyarrays",jpivarski,closed,2019-05-20T22:01:28Z,2019-05-20T23:07:54Z,0,True
+55,"Add from_numpy method to TH2",rob-tay,closed,2019-05-19T14:41:47Z,2019-05-20T21:56:38Z,5,True
+54,"ROOT::Math::LorentzVector",beojan,closed,2019-05-15T11:57:52Z,2019-05-15T12:09:05Z,1,False
+53,"uproot-methods v0.5.1 breaking pyhf",matthewfeickert,closed,2019-04-23T21:03:31Z,2019-04-25T21:40:04Z,5,False
+52,"License file not included on PyPI for 0.5.1",chrisburr,open,2019-04-23T17:15:49Z,None,4,False
+51,"Writing general histograms (general how?)",reikdas,closed,2019-04-22T16:17:42Z,2019-04-22T18:27:20Z,3,True
+50,"Move wrapjagged functionality to awkward-array",guitargeek,closed,2019-04-11T22:51:45Z,2019-04-12T01:59:44Z,2,True
+49,"Simplify all license messages to point to a central location.",jpivarski,closed,2019-04-11T17:47:01Z,2019-04-11T18:09:57Z,0,True
+48,"Avoid dynamic creation of ArrayMethods classes and new wrapjaggedmethods decorator",guitargeek,closed,2019-04-11T15:29:20Z,2019-04-11T16:25:07Z,11,True
+47,"Persistable physics vector arrays",jpivarski,closed,2019-03-29T14:42:29Z,2019-03-29T14:45:16Z,0,True
+46,"Add support for writing histograms read by uproot to ROOT files",reikdas,closed,2019-03-28T13:51:51Z,2019-03-30T15:19:10Z,1,True
+45,"CMS NanoAOD interface",jpivarski,open,2019-03-11T14:38:46Z,None,9,False
+44,"New version doesn't allow add columns to JaggedTLorentzVectorArray",zhenbinwu,closed,2019-03-09T23:34:02Z,2019-03-10T07:40:17Z,1,False
+43,"try to fix scikit-hep/awkward-array#85",jpivarski,closed,2019-02-26T12:58:30Z,2019-02-26T18:13:09Z,2,True
+42,"Introduction of TH3",marinang,closed,2019-02-19T13:19:03Z,2019-02-22T15:21:58Z,16,True
+41,"TLorentzVectorArray.from_ptetaphim without unpacking",dguest,closed,2019-02-08T07:22:45Z,2019-02-08T13:25:17Z,3,False
+40,"Store additional information in TLorentzVector",dguest,open,2019-02-07T21:34:08Z,None,4,False
+39,"reimplement PR #35 on top of #37 (and handle more cases)",jpivarski,closed,2019-02-05T18:23:07Z,2019-02-05T20:43:01Z,28,True
+38,"Use the JaggedArray type of the methods class passed in!",lgray,closed,2019-02-05T00:15:49Z,2019-02-05T15:04:02Z,2,True
+37,"Lazy Cartesian Evaluation for pt/eta/phi/mass LorentzVectors",lgray,closed,2019-02-04T20:08:13Z,2019-02-05T18:11:09Z,2,True
+36,"issue with the Numpy() method for TH2",alasfar-lina,closed,2019-02-02T21:38:42Z,2019-02-02T21:56:12Z,8,False
+35,"Make _unwrap_jagged deal with masked JaggedArrays",guitargeek,closed,2019-02-01T23:24:15Z,2019-02-05T18:24:48Z,10,True
+34,"fixed https://github.com/scikit-hep/uproot/pull/183#issuecomment-459057555",jpivarski,closed,2019-01-30T18:40:45Z,2019-01-30T19:09:52Z,2,True
+33,"Updated to define and use awkward library centrally.",jpivarski,closed,2019-01-29T20:14:56Z,2019-01-29T20:52:00Z,0,True
+32,"Fix Y binning and revert TH2.numpy behavior",nsmith-,closed,2019-01-06T16:07:30Z,2019-01-07T12:33:52Z,4,True
+31,"Bug -> uproot_methods 0.3.2 does not read in two dimensional histograms correctly",lgray,closed,2019-01-05T16:33:22Z,2019-01-07T20:25:50Z,6,False
+30,"TH2 variances returned as a list not a 2 by 2 array",alasfar-lina,closed,2018-12-28T10:10:40Z,2019-01-04T22:30:30Z,1,False
+29,"odds and ends over the break",jpivarski,closed,2018-12-24T14:52:53Z,2019-01-04T22:42:23Z,0,True
+28,"Recursion error with *=",henryiii,closed,2018-12-23T20:59:06Z,2019-01-04T22:44:00Z,2,False
+27,"Bug in rotatex and family",henryiii,closed,2018-12-23T20:41:40Z,2019-01-04T22:42:24Z,1,False
+26,"Unexpected behaviour of cartesian product of TVector3Arrays",phylsix,closed,2018-12-20T21:32:23Z,2018-12-25T00:03:45Z,2,False
+25,"Documentation of histogram methods",jpivarski,open,2018-12-14T15:41:31Z,None,2,False
+24,"TH1.py index method wrongly assumes a regular binning ",HDembinski,closed,2018-12-14T11:12:35Z,2019-01-04T22:46:23Z,4,False
+23,"adding test for TH1 and fixing from_numpy",HDembinski,closed,2018-12-14T11:08:01Z,2018-12-14T20:33:44Z,9,True
+22,"require version 0.7.0 or later of awkward",jpivarski,closed,2018-12-13T20:51:04Z,2018-12-13T21:10:31Z,0,True
+21,"return arrays instead of list copies",HDembinski,closed,2018-12-13T15:41:26Z,2018-12-13T16:17:51Z,4,True
+20,"adding new fields bins and allbins, to complement values and allvalues",HDembinski,closed,2018-12-13T15:36:07Z,2018-12-13T20:32:48Z,2,True
+19,"Ndarray instead of lists",HDembinski,closed,2018-12-13T15:31:49Z,2018-12-13T15:33:06Z,1,True
+18,"TH1 methods `values`, `variances`, `allvalues`, `allvariances` should return numpy arrays, not lists",HDembinski,closed,2018-12-13T15:28:48Z,2018-12-13T16:17:51Z,2,False
+17,"fix missing _fSumw2 field",HDembinski,closed,2018-12-13T15:24:53Z,2018-12-13T15:55:59Z,4,True
+16,"TH1 from_numpy does not fill _fSumw2",HDembinski,closed,2018-12-13T15:03:20Z,2018-12-13T15:55:59Z,0,False
+15,"Tests are missing for histograms",HDembinski,open,2018-12-13T14:59:52Z,None,3,False
+14,"This is a pre-release of 0.3.0",jpivarski,closed,2018-12-12T22:26:05Z,2018-12-12T23:04:49Z,0,True
+13,"Faster LorentzVector stuff",nsmith-,closed,2018-12-02T08:19:02Z,2018-12-02T22:37:27Z,1,True
+12,"Issue override jaggedarray sum",jpivarski,closed,2018-11-28T18:30:28Z,2018-11-28T18:53:34Z,0,True
+11,"Issue 10",jpivarski,closed,2018-11-28T15:23:07Z,2018-11-28T16:59:33Z,0,True
+10,"TLorentzVector ValueError in __repr__",shane-breeze,closed,2018-11-25T14:07:41Z,2018-11-28T17:00:39Z,4,False
+9,"Adding fix for cross and rotate",henryiii,closed,2018-11-08T18:53:13Z,2018-11-08T19:25:34Z,1,True
+8,"TH3 not yet implemented",marinang,open,2018-10-23T13:00:21Z,None,2,False
+7,"Introduction of TGraph/TGraphAsymmErrors/TGraphErrors",marinang,closed,2018-10-04T21:02:56Z,2018-10-05T13:04:04Z,8,True
+6,"TGraphAsymmErrors unusable.",marinang,closed,2018-10-02T16:04:04Z,2018-10-05T13:04:35Z,4,False
+5,"Roothist to pandas",jpivarski,closed,2018-09-26T16:41:47Z,2018-09-26T16:53:09Z,0,True
+4,"Move conversion code to methods",jpivarski,closed,2018-09-25T12:35:03Z,2018-09-25T12:50:27Z,0,True
+3,"Package has undocumented dependency on `python-awkward-array`",kgizdov,closed,2018-09-24T13:48:57Z,2018-09-24T20:46:36Z,0,False
+2,"NameError numbers.Real in TH1.fillallw",douglasdavis,closed,2018-09-20T12:57:47Z,2018-09-20T15:56:59Z,11,False
+1,"add variances in mixin for TH1*",kratsg,closed,2018-09-19T22:11:12Z,2018-09-19T22:23:17Z,0,True

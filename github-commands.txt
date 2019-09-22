@@ -5,3 +5,7 @@ python -c 'import json, glob; print("\n".join([fork["owner"]["login"] for filena
 for x in `cat github-cmssw/users.txt`; do curl "https://api.github.com/users/$x/repos?per_page=100" -u 'USERNAME:PASSWORD' > github-cmssw/user-$x.json; echo $x; done
 
 python -c 'import json, glob; print("repo,owner,isfork,created,language"); print("\n".join([",".join(map(str, [repo["name"], repo["owner"]["login"], repo["fork"], repo["created_at"], repr(repo["language"])])) for filename in glob.glob("github-cmssw/user-*.json") for repo in json.load(open(filename))]))' > github-cmssw.csv
+
+curl "https://api.github.com/repos/scikit-hep/REPOSITORY/issues?state=all&page=PAGENUM&per_page=100" >> github-issues-REPOSITORY.json
+
+python -c 'import json; print("number,title,user,state,date_created,date_closed,numcomments,ispull"); print("\n".join([",".join([str(x["number"]), json.dumps(x["title"]), x["user"]["login"], x["state"], str(x["created_at"]), str(x["closed_at"]), str(x["comments"]), str("pull_request" in x)]) for x in json.load(open("github-issues-REPOSITORY.json"))]))' > github-issues-REPOSITORY.csv 
