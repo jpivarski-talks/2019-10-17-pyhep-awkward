@@ -57,7 +57,7 @@
 % START START START START START START START START START START START START START
 
 \begin{frame}{}
-\LARGE
+\huge
 \vspace{1 cm}
 \begin{center}
 \textcolor{darkblue}{Year of Python?}
@@ -119,6 +119,14 @@
 \end{columns}
 \end{frame}
 
+\begin{frame}{This is, in a sense, the third phase transition for our field}
+\vspace{0.5 cm}
+\begin{columns}
+\column{1.1\linewidth}
+\includegraphics[width=\linewidth]{programming-languages.pdf}
+\end{columns}
+\end{frame}
+
 \begin{frame}{Uproot/Awkward maintainance is pretty much constant}
 \Large
 \vspace{0.75 cm}
@@ -150,6 +158,103 @@
 \end{columns}
 \end{frame}
 
+\begin{frame}{}
+\huge
+\vspace{1 cm}
+\begin{center}
+\textcolor{darkblue}{Future of Uproot and Awkward}
+\end{center}
+\end{frame}
 
+\begin{frame}{Future of uproot: maintenance}
+\Large
+\vspace{0.35 cm}
+\begin{itemize}\setlength{\itemsep}{0.25 cm}
+\item<1-> TTree-writing was the last {\it major} feature planned.
+\item<2-> Bugs will be fixed.
+\item<3-> Uproot will keep ahead of changes in ROOT I/O.
+
+\vspace{0.05 cm}
+\textcolor{gray}{\normalsize (Only one ROOT change has required intervention in uproot's two-year existence.)}
+
+\item<4-> ROOT's future RNtuple can probably be handled with semi-independent code, as uproot-methods is now.
+\item<5-> ``Uproot 4.0'' will be a transition to Awkward 1.0.
+\end{itemize}
+
+\normalsize
+\vspace{0.25 cm}
+\uncover<6->{\textcolor{gray}{(Apart from TTree-writing, uproot has been in maintenance mode for a year already.)}}
+\end{frame}
+
+\begin{frame}{Future of awkward: ``consolidation''}
+\Large
+\vspace{0.35 cm}
+\begin{itemize}\setlength{\itemsep}{0.25 cm}
+\item<1-> Awkward has been tested ``in the wild'' for a year now.
+\item<2-> Pure Numpy implementation does some complex (clever!) things to perform jagged operations: no \mintinline{python}{for} loops allowed.
+
+\vspace{0.1 cm}
+\begin{itemize}\setlength{\itemsep}{0.2 cm}
+\item<3-> \large There are limits to cleverness: many edge cases not handled.
+\item<4-> \large Most frequent bugs are due to Numpy usage (e.g.\ \mintinline{python}{numpy.max([])}).
+\item<5-> \large Desire to use awkward-arrays in Numba, on GPUs, and in C++ library interfaces leads to duplication; hard to synchronize implementations.
+\end{itemize}
+
+\item<6-> Feedback from users revealed some design mistakes.
+
+\vspace{0.1 cm}
+\begin{itemize}\setlength{\itemsep}{0.2 cm}
+\item<7-> \large \mintinline{python}{a.cross(b)} versus \mintinline{python}{awkward.cross(a, b)}
+\item<8-> \large User-visible \mintinline{python}{JaggedArray} versus \mintinline{python}{ChunkedArray(JaggedArray)}
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Rewrite/redesign in C and C++}
+\large
+\vspace{0.5 cm}
+\begin{columns}
+\column{0.5\linewidth}
+\vspace{-0.2 cm}
+
+\textcolor{darkblue}{Layer 1:} Python user interface.
+\vspace{2\baselineskip}
+
+\vspace{0.18 cm}
+\textcolor{darkblue}{Layer 2:} Structure classes, ``layout''
+
+(such as \mintinline{python}{JaggedArray}).
+\vspace{\baselineskip}
+
+\vspace{0.18 cm}
+\textcolor{darkblue}{Layer 3:} Memory management, array allocation and ownership.
+\vspace{2\baselineskip}
+
+\vspace{0.18 cm}
+\textcolor{darkblue}{Layer 4:} Implementations, where we write \mintinline{python}{for} loops. The only layer that needs to be optimized.
+
+\column{0.5\linewidth}
+\includegraphics[width=\linewidth]{awkward-1-0-layers.pdf}
+\end{columns}
+\end{frame}
+
+
+
+
+%% \begin{frame}{Not for lack of experience: I used C++ about as much as Python}
+%% \vspace{0.5 cm}
+%% \begin{columns}
+%% \column{1.1\linewidth}
+%% \includegraphics[width=\linewidth]{personal-programming-languages.pdf}
+%% \end{columns}
+%% \end{frame}
+
+%% \begin{frame}{}
+%% \huge
+%% \vspace{1 cm}
+%% \begin{center}
+%% \textcolor{darkblue}{BACKUP}
+%% \end{center}
+%% \end{frame}
 
 \end{document}
