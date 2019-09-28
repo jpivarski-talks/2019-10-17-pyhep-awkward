@@ -132,11 +132,11 @@
 
 \vspace{0.25 cm}
 \begin{center}
-\uncover<3->{The problem with GitHub issues is that they go away, once closed.}
+\uncover<3->{The problem with GitHub issues is that once closed, they disappear.}
 \end{center}
 \end{frame}
 
-\begin{frame}{Use StackOverflow!}
+\begin{frame}{Let's use StackOverflow (like most non-HEP software communities)}
 \begin{center}
 \includegraphics[width=0.88\linewidth]{uproot-stackoverflow.png}
 \end{center}
@@ -209,18 +209,18 @@
 \column{0.5\linewidth}
 \vspace{-0.2 cm}
 
-\textcolor{darkblue}{Layer 1:} Python user interface.
-\vspace{2\baselineskip}
+\textcolor{darkblue}{Layer 1:} Python user interface: a single \mintinline{python}{awkward.Array} class.
+\vspace{\baselineskip}
 
 \vspace{0.18 cm}
 \textcolor{darkblue}{Layer 2:} Structure classes, ``layout''
 
-(such as \mintinline{python}{JaggedArray}).
+(such as \mintinline{python}{JaggedArray}/\mintinline{python}{Table}).
 \vspace{\baselineskip}
 
 \vspace{0.18 cm}
-\textcolor{darkblue}{Layer 3:} Memory management, array allocation and ownership.
-\vspace{2\baselineskip}
+\textcolor{darkblue}{Layer 3:} Memory management, array allocation and ownership; reference counting.
+\vspace{\baselineskip}
 
 \vspace{0.18 cm}
 \textcolor{darkblue}{Layer 4:} Implementations, where we write \mintinline{python}{for} loops. The only layer that needs to be optimized.
@@ -447,7 +447,7 @@ void slices() {
 \begin{itemize}\setlength{\itemsep}{0.1 cm}
 \item[\textcolor{darkblue}{$\surd$}] Set up compilation and deployment chain on ManyLinux, MacOS, and Windows.
 \item[\textcolor{darkblue}{$\surd$}] Create basic \mintinline{c++}{NumpyArray}/\mintinline{c++}{ListArray} suite and ensure proper reference counting between Python, \mintinline{c++}{std::shared_ptr}, and Numba's NRT.
-\item[\textcolor{darkblue}{$\surd$}] Pass through new ``\mintinline{c++}{Identity}'' (Pandas-style index) at every level.
+\item[\textcolor{darkblue}{$\surd$}] Pass through new ``\mintinline{c++}{Identity}'' arrays (Pandas-style index) at every level.
 \item[\textcolor{darkblue}{$\surd$}] Access the same layer 4 functions in C++ and Numba.
 \end{itemize}
 
@@ -466,7 +466,7 @@ void slices() {
 
 \item Transition {\normalsize \mintinline{python}{import awkward}} $\to$ {\normalsize \mintinline{python}{import awkward0}}
 
-\hspace{1.1 cm}and {\normalsize \mintinline{python}{import awkward1}} $\to$ {\normalsize \mintinline{python}{import awkward}} in 2020.
+\hspace{1.1 cm}and {\normalsize \mintinline{python}{import awkward1}} $\to$ {\normalsize \mintinline{python}{import awkward}} in early 2020.
 \end{itemize}
 \end{frame}
 
