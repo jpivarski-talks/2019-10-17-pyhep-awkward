@@ -104,14 +104,6 @@
 \end{columns}
 \end{frame}
 
-\begin{frame}{(In general, uproot is 4 orders of magnitude below Pandas)}
-\vspace{0.5 cm}
-\begin{columns}
-\column{1.2\linewidth}
-\only<1>{\includegraphics[width=\linewidth]{pip-linux.pdf}}\only<2>{\includegraphics[width=\linewidth]{pip-macos.pdf}}\only<3>{\includegraphics[width=\linewidth]{pip-windows.pdf}}
-\end{columns}
-\end{frame}
-
 \begin{frame}{Another way to see Python usage among physicists: GitHub repos}
 \begin{columns}
 \column{1.2\linewidth}
@@ -135,7 +127,7 @@
 \includegraphics[width=\linewidth]{uproot-issues.pdf}
 
 \column{0.72\linewidth}
-\only<1>{\includegraphics[width=0.5\linewidth]{uproot-users.pdf}\hfill\includegraphics[width=0.5\linewidth]{uproot-comments.pdf}}\only<2->{\centering \includegraphics[width=0.45\linewidth]{uproot-response-time.pdf}}
+\only<1>{\includegraphics[width=0.5\linewidth]{uproot-users.pdf}\hfill\includegraphics[width=0.5\linewidth]{uproot-comments.pdf}}\only<2->{\hfill\includegraphics[width=0.45\linewidth]{uproot-response-time.pdf}\hfill\includegraphics[width=0.45\linewidth]{uproot-response-time-linear.pdf}}
 \end{columns}
 
 \vspace{0.25 cm}
@@ -484,6 +476,14 @@ void slices() {
 \begin{center}
 \textcolor{darkblue}{BACKUP}
 \end{center}
+\end{frame}
+
+\begin{frame}{(In general, uproot is 4 orders of magnitude below Pandas)}
+\vspace{0.5 cm}
+\begin{columns}
+\column{1.2\linewidth}
+\only<1>{\includegraphics[width=\linewidth]{pip-linux.pdf}}\only<2>{\includegraphics[width=\linewidth]{pip-macos.pdf}}\only<3>{\includegraphics[width=\linewidth]{pip-windows.pdf}}
+\end{columns}
 \end{frame}
 
 \begin{frame}[fragile]{Analysis of pip download data \only<1-3>{(Google BigQuery)}\only<4>{(GitHub API)}}
