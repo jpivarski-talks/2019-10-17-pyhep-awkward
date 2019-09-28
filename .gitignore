@@ -1,3 +1,7 @@
+.ipynb_checkpoints
+github-cmssw/*
+q.log
+
 main.aux
 main.bbl
 main.blg
