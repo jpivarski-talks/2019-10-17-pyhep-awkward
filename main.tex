@@ -238,6 +238,49 @@
 \end{columns}
 \end{frame}
 
+\begin{frame}[fragile]{Example of what layer 4 looks like}
+\tiny
+\vspace{0.05 cm}
+\begin{columns}
+\column{1.1\linewidth}
+\begin{minted}{c++}
+extern "C" {
+  Error awkward_listarray32_getitem_next_at_64(int64_t* tocarry, const int32_t* fromstarts, const int32_t* fromstops,
+                                               int64_t lenstarts, int64_t startsoffset, int64_t stopsoffset, int64_t at);
+  Error awkward_listarray64_getitem_next_at_64(int64_t* tocarry, const int64_t* fromstarts, const int64_t* fromstops,
+                                               int64_t lenstarts, int64_t startsoffset, int64_t stopsoffset, int64_t at);
+}
+
+template <typename C, typename T>
+Error awkward_listarray_getitem_next_at(T* tocarry, const C* fromstarts, const C* fromstops, int64_t lenstarts,
+                                        int64_t startsoffset, int64_t stopsoffset, int64_t at) {
+  for (int64_t i = 0;  i < lenstarts;  i++) {
+    int64_t length = fromstops[stopsoffset + i] - fromstarts[startsoffset + i];
+    int64_t regular_at = at;
+    if (regular_at < 0) {
+      regular_at += length;
+    }
+    if (!(0 <= regular_at  &&  regular_at < length)) {
+      return "index out of range";
+    }
+    tocarry[i] = fromstarts[startsoffset + i] + regular_at;
+  }
+  return kNoError;
+}
+Error awkward_listarray32_getitem_next_at_64(int64_t* tocarry, const int32_t* fromstarts, const int32_t* fromstops,
+                                             int64_t lenstarts, int64_t startsoffset, int64_t stopsoffset, int64_t at) {
+  return awkward_listarray_getitem_next_at<int32_t, int64_t>(tocarry, fromstarts, fromstops, lenstarts,
+                                                             startsoffset, stopsoffset, at);
+}
+Error awkward_listarray64_getitem_next_at_64(int64_t* tocarry, const int64_t* fromstarts, const int64_t* fromstops,
+                                             int64_t lenstarts, int64_t startsoffset, int64_t stopsoffset, int64_t at) {
+  return awkward_listarray_getitem_next_at<int64_t, int64_t>(tocarry, fromstarts, fromstops, lenstarts,
+                                                             startsoffset, stopsoffset, at);
+}
+\end{minted}
+\end{columns}
+\end{frame}
+
 
 
 %% \begin{frame}{Not for lack of experience: I used C++ about as much as Python}
