@@ -144,7 +144,7 @@ for (int i = 0;  i < 10;  i++) {
 }
 std::shared_ptr<Content> content(raw);
 std::shared_ptr<Content> list(new ListOffsetArray32(Identity::none(),
-                              offsets, content));
+                                                    offsets, content));
 \end{minted}
 \begin{uncoverenv}<2->
 \begin{minted}{c++}
@@ -206,10 +206,10 @@ print(iterate(listB))
 \end{Verbatim}
 \begin{uncoverenv}<2->
 \begin{minted}{python}
-# the same slicing rules apply in the compiled environment
 @numba.jit(nopython=True)
-def slices(array):
-    return array[:, ::-1, ::2], array[[0, 0, -1, -1], [0, -1, 0, -1], 1:-1]
+def slices(array):                       # same slicing works in the compiled environment
+    return (array[:, ::-1, ::2],
+            array[[0, 0, -1, -1], [0, -1, 0, -1], 1:-1])
 
 one, two = slices(listB)
 print(awkward1.tolist(one), awkward1.tolist(two))
