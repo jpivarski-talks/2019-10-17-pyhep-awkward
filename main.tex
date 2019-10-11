@@ -311,6 +311,42 @@ else if (SliceRange* range = dynamic_cast<SliceRange*>(head.get())) {
 \vspace{1 cm}
 \end{frame}
 
+\begin{frame}[fragile]{Layer 3: Numba models}
+\vspace{0.5 cm}
+\hfill\mbox{\includegraphics[height=4 cm]{awkward-1-0-layers-mini-numba.pdf}\hspace{-0.75 cm}}
+
+\scriptsize
+\vspace{-4.45 cm}
+\begin{columns}
+\column{1.1\linewidth}
+\begin{minted}{python}
+if isinstance(headtpe, numba.types.Integer):
+  if arraytpe.bitwidth == 64:
+    kernel = cpu.kernels.awkward_listarray64_getitem_next_at_64
+  elif arraytpe.bitwidth == 32:
+    kernel = cpu.kernels.awkward_listarray32_getitem_next_at_64
+
+  nextcarry = util.newindex64(context, builder, numba.int64, lenstarts)
+  util.call(context, builder, kernel,
+    (util.arrayptr(context, builder, util.index64tpe, nextcarry),
+     util.arrayptr(context, builder, arraytpe.startstpe, proxyin.starts),
+     util.arrayptr(context, builder, arraytpe.stopstpe, proxyin.stops),
+     lenstarts,
+     context.get_constant(numba.int64, 0),
+     context.get_constant(numba.int64, 0),
+     util.cast(context, builder, headtpe, numba.int64, headval)),
+    "in {}, indexing error".format(arraytpe.shortname))
+  nextcontenttpe = arraytpe.contenttpe.carry()
+  nextcontentval = arraytpe.contenttpe.lower_carry(context, builder, arraytpe.contenttpe,
+                                           util.index64tpe, proxyin.content, nextcarry)
+  return nextcontenttpe.lower_getitem_next(context, builder, nextcontenttpe, tailtpe,
+                                           nextcontentval, tailval, advanced)
+elif isinstance(headtpe, numba.types.SliceType):
+  ...
+\end{minted}
+\end{columns}
+\vspace{1 cm}
+\end{frame}
 
 
 
