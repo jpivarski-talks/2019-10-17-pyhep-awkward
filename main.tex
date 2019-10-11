@@ -56,8 +56,103 @@
 
 % START START START START START START START START START START START START START
 
-\begin{frame}{asdf}
-adsf
+\begin{frame}{On Scientific Linux, uproot/awkward is installed as often as Pandas}
+\vspace{0.5 cm}
+\begin{columns}
+\column{1.2\linewidth}
+\includegraphics[width=\linewidth]{pip-scilinux-uproot.pdf}
+\end{columns}
+\end{frame}
+
+\begin{frame}{But not beyond particle physics, obviously}
+\vspace{0.5 cm}
+\begin{columns}
+\column{1.2\linewidth}
+\only<1>{\includegraphics[width=\linewidth]{pip-linux.pdf}}\only<2>{\includegraphics[width=\linewidth]{pip-macos.pdf}}\only<3>{\includegraphics[width=\linewidth]{pip-windows.pdf}}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Uproot/Awkward maintainance is pretty much constant}
+\Large
+\vspace{0.75 cm}
+\begin{columns}
+\column{0.36\linewidth}
+\includegraphics[width=\linewidth]{uproot-issues.pdf}
+
+\column{0.72\linewidth}
+\only<1>{\includegraphics[width=0.5\linewidth]{uproot-users.pdf}\hfill\includegraphics[width=0.5\linewidth]{uproot-comments.pdf}}\only<2->{\hfill\includegraphics[width=0.45\linewidth]{uproot-response-time.pdf}\hfill\includegraphics[width=0.45\linewidth]{uproot-response-time-linear.pdf}}
+\end{columns}
+
+\vspace{0.25 cm}
+\begin{center}
+\uncover<3->{The problem with GitHub issues is that once closed, they disappear.}
+\end{center}
+\end{frame}
+
+\begin{frame}{Let's use StackOverflow (like most non-HEP software communities)}
+\begin{center}
+\includegraphics[width=0.88\linewidth]{uproot-stackoverflow.png}
+\end{center}
+\end{frame}
+
+\begin{frame}{No, seriously, do it now.}
+\vspace{0.15 cm}
+\begin{columns}
+\column{1.2\linewidth}
+\includegraphics[width=\linewidth]{stackoverflow-signup.png}
+\end{columns}
+\end{frame}
+
+\begin{frame}{}
+\huge
+\vspace{1 cm}
+\begin{center}
+\textcolor{darkblue}{Future of Uproot and Awkward}
+\end{center}
+\end{frame}
+
+\begin{frame}{Future of Uproot: maintenance}
+\Large
+\vspace{0.35 cm}
+\begin{itemize}\setlength{\itemsep}{0.25 cm}
+\item<1-> TTree-writing was the last {\it major} feature planned.
+\item<2-> Bugs will be fixed.
+\item<3-> Uproot will keep ahead of changes in ROOT I/O.
+
+\vspace{0.05 cm}
+\textcolor{gray}{\normalsize (Only one change in ROOT I/O in uproot's two-year existence: \mintinline{c++}{TIOFeatures}.)}
+
+\item<4-> ROOT's future \mintinline{c++}{RNtuple} can probably be handled with semi-independent code, as uproot-methods is now.
+\item<5-> ``Uproot 4.0'' will be a transition to Awkward 1.0.
+\end{itemize}
+
+\normalsize
+\vspace{0.25 cm}
+\uncover<6->{\textcolor{gray}{(Apart from TTree-writing, uproot has been in maintenance mode for a year already.)}}
+\end{frame}
+
+\begin{frame}{Future of Awkward: consolidation}
+\Large
+\vspace{0.35 cm}
+\begin{itemize}\setlength{\itemsep}{0.25 cm}
+\item<1-> Awkward has been tested ``in the wild'' for a year now.
+\item<2-> Pure Numpy implementation does some complex (clever!) things to perform jagged operations: no \mintinline{python}{for} loops allowed.
+
+\vspace{0.1 cm}
+\begin{itemize}\setlength{\itemsep}{0.2 cm}
+\item<3-> \large There are limits to cleverness: many edge cases not handled.
+\item<4-> \large Most frequent bugs are due to Numpy usage (e.g.\ \mintinline{python}{numpy.max([])}).
+\item<5-> \large Desire to use awkward-arrays in Numba, on GPUs, and in C++ library interfaces leads to duplication; hard to synchronize implementations.
+\end{itemize}
+
+\item<6-> Feedback from users revealed some design mistakes.
+
+\vspace{0.1 cm}
+\begin{itemize}\setlength{\itemsep}{0.2 cm}
+\item<7-> \large \mintinline{python}{a.cross(b)} versus \mintinline{python}{awkward.cross(a, b)}
+\item<8-> \large User-visible \mintinline{python}{JaggedArray} versus \mintinline{python}{ChunkedArray(JaggedArray)}
+\end{itemize}
+\end{itemize}
 \end{frame}
 
 \begin{frame}{}
@@ -68,7 +163,7 @@ adsf
 \end{center}
 \end{frame}
 
-\begin{frame}{Fresh start, new repo}
+\begin{frame}{Awkward 1.0 is a {\it rewrite}, improving structure and interface}
 \vspace{0.2 cm}
 \begin{columns}
 \column{1.15\linewidth}
@@ -400,7 +495,7 @@ elif isinstance(headtpe, numba.types.SliceType):
 Slow Python has been replaced by slow C++ (dynamic dispatch, runtime type-checks).
 
 \vspace{0.75 cm}
-But only $\mathcal{O}(\mbox{depth of type})$ operations are performed in C++; $\mathcal{O}(\mbox{number of events})$ operations are performed in single-pass cpu-functions, someday gpu-functions.
+But only $\mathcal{O}(\mbox{depth of type})$ operations are performed in C++; $\mathcal{O}(\mbox{number of events})$ operations are performed in single-pass cpu-functions.
 \end{columns}
 
 \begin{center}
@@ -455,7 +550,7 @@ Indexing by an integer array is functional composition:
 
 \vspace{-0.35 cm}
 \begin{uncoverenv}<3->
-So if \mintinline{python}{f} and \mintinline{python}{g} are $\mathbb{Z}^{\mbox{\tiny $\ge\hspace{-0.05 cm}0$}} \to \mathbb{Z}^{\mbox{\tiny $\ge\hspace{-0.05 cm}0$}}$ functions,
+So if \mintinline{python}{f} and \mintinline{python}{g} are $\mathbb{Z}^{\mbox{\tiny $\ge\hspace{-0.05 cm}0$}} \to \mathbb{Z}^{\mbox{\tiny $\ge\hspace{-0.05 cm}0$}}$ functions and we sample them as \mintinline{python}{F} and \mintinline{python}{G},
 \normalsize
 \begin{minted}{python}
     F   = numpy.array([f(i)    for i in range(...)])
@@ -582,18 +677,32 @@ An \mintinline{c++}{Identity} (surrogate-key index) is needed to define set oper
 \end{columns}
 \end{frame}
 
-\begin{frame}{}
-\huge
-\vspace{1 cm}
+\begin{frame}{Multi-paradigm arrays}
+\large
+\vspace{0.75 cm}
+With a dataset in Awkward form (from TTrees, RNtuples, Arrow\ldots), we want to
+
+\vspace{0.25 cm}
+\begin{itemize}\setlength{\itemsep}{0.25 cm}
+\item<2-> perform Numpy-like slicing, reduction, and vectorized operations,
+\item<3-> enter a compiled Numba function for imperative code in Python,
+\item<4-> pass to/from a C++ library (e.g.\ jagged array of Lorentz vectors to FastJet),
+\item<5-> apply an expression using a HEP-specific domain specific language,
+\end{itemize}
+
+\vspace{0.25 cm}
+\uncover<6->{interchangeably.}
+
+\vspace{0.5 cm}
 \begin{center}
-\textcolor{darkblue}{HERE}
+\uncover<7->{\textcolor{darkorange}{\bf Awkward 1.0 is intended as a solid foundation for that future.}}
 \end{center}
 \end{frame}
 
-\begin{frame}{Timeframe}
+\begin{frame}{When can I try it?}
 \Large
 \begin{center}
-It is minimally testable now \textcolor{gray}{(for Coffea and thrill-seekers)}.
+\textcolor{darkblue}{Nowish:} it is in a testable state \textcolor{gray}{(for Coffea and thrill-seekers)}.
 
 \vspace{1 cm}
 Will be minimally usable for physics analysis in ``early 2020.''
@@ -613,5 +722,12 @@ Start an {\normalsize \mintinline{python}{import awkward}} $\to$ {\normalsize \m
 \end{columns}
 \end{frame}
 
+\begin{frame}{Did you get a StackOverflow account?}
+\vspace{0.15 cm}
+\begin{columns}
+\column{1.2\linewidth}
+\includegraphics[width=\linewidth]{stackoverflow-signup.png}
+\end{columns}
+\end{frame}
 
 \end{document}
