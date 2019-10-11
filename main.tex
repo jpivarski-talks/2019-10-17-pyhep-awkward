@@ -480,9 +480,9 @@ Used throughout \mintinline{c++}{getitem_next} to ``carry'' information from one
 \end{center}
 \end{frame}
 
-\begin{frame}{Indexing distinguishes Numpy from Pandas and xarray}
+\begin{frame}[fragile]{Indexing distinguishes Numpy from Pandas and xarray}
 \large
-\vspace{0.5 cm}
+\vspace{0.6 cm}
 \begin{columns}
 \column{1.5 cm}
 \includegraphics[height=2 cm]{numpy-logo.png}
@@ -494,10 +494,37 @@ Used throughout \mintinline{c++}{getitem_next} to ``carry'' information from one
 \includegraphics[height=2 cm]{pandas-logo.png}\hspace{0.5 cm}\includegraphics[height=2 cm]{xarray-logo.png}
 \end{columns}
 
+\vspace{0.5 cm}
+\begin{columns}
+\column{1.03\linewidth}
+Awkward 1.0 operations will optionally pass through an \mintinline{c++}{Identity}, an extra array that associates permanent coordinates with each value in the data.
+
+\vspace{0.25 cm}
+\begin{uncoverenv}<2->
+Good for error messages:
+
+\small
+\begin{minted}{python}
+>>> dataset.setid()   # generate Identiti
+>>> primary_jet_for_muon = dataset[:, "muons", :, "jets", 0]
+\end{minted}
+
+\vspace{-0.5 cm}
+\begin{verbatim}
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+ValueError: in ListArray32 at id[10374, "muons", 1, "jets"] attempting
+            to get 0, index out of range
+\end{verbatim}
+\end{uncoverenv}
+\end{columns}
+\end{frame}
+
+\begin{frame}{}
+
 
 
 \end{frame}
-
 
 \begin{frame}{}
 \huge
