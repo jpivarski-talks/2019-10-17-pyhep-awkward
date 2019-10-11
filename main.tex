@@ -172,8 +172,39 @@ tostring(list.get()->getitem(slice(new SliceRange(2, Slice::none(), Slice::none(
 \begin{columns}
 \column{1.1\linewidth}
 \begin{minted}{python}
-asdf
+import numba
+
+@numba.jit(nopython=True)
+def iterate(array):
+    out = 0.0
+    for subarray in array:               # for loops in a Numba-
+        for subsubarray in subarray:     # compiled block are
+            for item in subsubarray:     # just as fast as C++
+                out += item
+    return out
+
+print(iterate(listB))
 \end{minted}
+
+\vspace{-0.25 cm}
+\begin{Verbatim}[commandchars=\\\{\}]
+\textcolor{red}{49.5}
+\end{Verbatim}
+\begin{minted}{python}
+@numba.jit(nopython=True)
+def slices(array):
+    # slicing works equally well inside the compiled environment
+    return array[:, ::-1, ::2], array[[0, 0, -1, -1], [0, -1, 0, -1], 1:-1]
+
+one, two = slices(listB)
+print(awkward1.tolist(one), awkward1.tolist(two))
+\end{minted}
+
+\vspace{-0.25 cm}
+\begin{Verbatim}[commandchars=\\\{\}]
+\textcolor{red}{[[[3.3], [], [0.0, 2.2]], [[5.5]], [], [[6.6, 8.8]]]}    \textcolor{gray}{(same results as before)}
+\textcolor{red}{[[1.1], [], [7.7, 8.8], [7.7, 8.8]]}
+\end{Verbatim}
 \end{columns}
 \end{frame}
 
