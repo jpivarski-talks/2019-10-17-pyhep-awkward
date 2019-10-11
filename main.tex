@@ -60,7 +60,15 @@
 adsf
 \end{frame}
 
-\begin{frame}{Awkward 1.0, developed in a separate repo from Awkward 0.x}
+\begin{frame}{}
+\huge
+\vspace{1 cm}
+\begin{center}
+\textcolor{darkblue}{Awkward 1.0}
+\end{center}
+\end{frame}
+
+\begin{frame}{Fresh start, new repo}
 \vspace{0.2 cm}
 \begin{columns}
 \column{1.15\linewidth}
@@ -68,7 +76,7 @@ adsf
 \end{columns}
 \end{frame}
 
-\begin{frame}{Architecture of Awkward 1.0}
+\begin{frame}{Layered architecture}
 \large
 \vspace{0.5 cm}
 \begin{columns}
@@ -89,7 +97,7 @@ adsf
 \vspace{\baselineskip}
 
 \vspace{0.18 cm}
-\textcolor{darkblue}{Layer 4:} Implementations, where we write \mintinline{python}{for} loops. The only layer that needs to be optimized.
+\textcolor{darkblue}{Layer 4:} Implementations, where we write \mintinline{python}{for} loops. The only layer that needs to be optimized for speed.
 
 \column{0.5\linewidth}
 \includegraphics[width=\linewidth]{awkward-1-0-layers.pdf}
@@ -382,6 +390,121 @@ elif isinstance(headtpe, numba.types.SliceType):
 \end{minted}
 \end{columns}
 \vspace{1 cm}
+\end{frame}
+
+\begin{frame}{Still following the array-at-a-time approach}
+\large
+\vspace{1 cm}
+\begin{columns}
+\column{1.07\linewidth}
+Slow Python has been replaced by slow C++ (dynamic dispatch, runtime type-checks).
+
+\vspace{0.75 cm}
+But only $\mathcal{O}(\mbox{depth of type})$ operations are performed in C++; $\mathcal{O}(\mbox{number of events})$ operations are performed in single-pass cpu-functions, someday gpu-functions.
+\end{columns}
+
+\begin{center}
+\includegraphics[width=0.5\linewidth]{google-dremel-fig1.png}
+\end{center}
+\end{frame}
+
+\begin{frame}{}
+\huge
+\vspace{1 cm}
+\begin{center}
+\textcolor{darkblue}{Mathematical aspects}
+\end{center}
+\end{frame}
+
+\begin{frame}[fragile]{Functional programming for arrays}
+\large
+\vspace{0.4 cm}
+Arrays are functions:
+
+\vspace{-0.45 cm}
+\[ \mintinline{python}{array}: [0, n) \to \mintinline{python}{dtype} \]
+
+\vspace{0.15 cm}
+such that \mintinline{python}{array[i]} for integer \mintinline{python}{i} is a function call.
+
+\vspace{0.5 cm}
+\begin{uncoverenv}<2->
+Indexing by an integer array is functional composition:
+
+\vspace{-0.5 cm}
+\[ \mintinline{python}{ints}: [0, m) \to [0, n) \hspace{1 cm}\Rightarrow\hspace{1 cm} \mintinline{python}{array[ints]}: [0, m) \to \mintinline{python}{dtype} \]
+\end{uncoverenv}
+
+\vspace{-0.35 cm}
+\begin{uncoverenv}<3->
+So if \mintinline{python}{f} and \mintinline{python}{g} are $\mathbb{Z}^{\mbox{\tiny $\ge\hspace{-0.05 cm}0$}} \to \mathbb{Z}^{\mbox{\tiny $\ge\hspace{-0.05 cm}0$}}$ functions,
+\normalsize
+\begin{minted}{python}
+    F   = numpy.array([f(i)    for i in range(...)])
+    G   = numpy.array([g(i)    for i in range(...)])
+    GoF = numpy.array([g(f(i)) for i in range(...)])
+\end{minted}
+
+\large
+\vspace{0.1 cm}
+then \fbox{$\mintinline{python}{G[F]} = \mintinline{python}{GoF}$}.
+\end{uncoverenv}
+
+\vspace{0.5 cm}
+\begin{uncoverenv}<4->
+Functional composition is associative: if \mintinline{python}{H} is any array, \fbox{$\mintinline{python}{H[G][F]} = \mintinline{python}{H[G[F]]}$}.
+\end{uncoverenv}
+\end{frame}
+
+\begin{frame}{Associativity of integer-array indexing is a very useful feature}
+\vspace{0.2 cm}
+\begin{columns}
+\column{0.485\linewidth}
+\includegraphics[width=\linewidth]{arrays-as-functions-paper.png}
+
+\column{0.5\linewidth}
+\small
+\textcolor{blue}{\url{https://github.com/scikit-hep/awkward-1.0/blob/master/docs/theory/arrays-are-functions.pdf}}
+
+\large
+\vspace{1 cm}
+Used throughout \mintinline{c++}{getitem_next} to ``carry'' information from one level of recursion to the next, in analogy with carrying digits in longhand addition.
+\end{columns}
+\end{frame}
+
+\begin{frame}{}
+\huge
+\vspace{1 cm}
+\begin{center}
+\textcolor{darkblue}{Pandas-style indexing}
+\end{center}
+\end{frame}
+
+\begin{frame}{Indexing distinguishes Numpy from Pandas and xarray}
+\large
+\vspace{0.5 cm}
+\begin{columns}
+\column{1.5 cm}
+\includegraphics[height=2 cm]{numpy-logo.png}
+
+\column{0.5 cm}
+\centering \huge vs.
+
+\column{4.5 cm}
+\includegraphics[height=2 cm]{pandas-logo.png}\hspace{0.5 cm}\includegraphics[height=2 cm]{xarray-logo.png}
+\end{columns}
+
+
+
+\end{frame}
+
+
+\begin{frame}{}
+\huge
+\vspace{1 cm}
+\begin{center}
+\textcolor{darkblue}{HERE}
+\end{center}
 \end{frame}
 
 \begin{frame}{Deliverables of Awkward 1.0}
