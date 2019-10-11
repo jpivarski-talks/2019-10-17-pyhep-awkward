@@ -60,6 +60,42 @@
 adsf
 \end{frame}
 
+\begin{frame}{Awkward 1.0, developed in a separate repo from Awkward 0.x}
+\vspace{0.2 cm}
+\begin{columns}
+\column{1.15\linewidth}
+\includegraphics[width=\linewidth]{awkward-1-github.png}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Architecture of Awkward 1.0}
+\large
+\vspace{0.5 cm}
+\begin{columns}
+\column{0.5\linewidth}
+\vspace{-0.2 cm}
+
+\textcolor{darkblue}{Layer 1:} Python user interface: a single \mintinline{python}{awkward.Array} class.
+\vspace{\baselineskip}
+
+\vspace{0.18 cm}
+\textcolor{darkblue}{Layer 2:} Structure classes, ``layout''
+
+(e.g.\ \mintinline{python}{ListArray}/\mintinline{python}{RecordArray}).
+\vspace{\baselineskip}
+
+\vspace{0.18 cm}
+\textcolor{darkblue}{Layer 3:} Memory management, array allocation and ownership; reference counting.
+\vspace{\baselineskip}
+
+\vspace{0.18 cm}
+\textcolor{darkblue}{Layer 4:} Implementations, where we write \mintinline{python}{for} loops. The only layer that needs to be optimized.
+
+\column{0.5\linewidth}
+\includegraphics[width=\linewidth]{awkward-1-0-layers.pdf}
+\end{columns}
+\end{frame}
+
 \begin{frame}[fragile]{Layer 2: pybind11 of C++}
 \vspace{0.5 cm}
 \hfill\mbox{\includegraphics[height=4 cm]{awkward-1-0-layers-mini-pybind11.pdf}\hspace{-0.75 cm}}
@@ -348,6 +384,46 @@ elif isinstance(headtpe, numba.types.SliceType):
 \vspace{1 cm}
 \end{frame}
 
+\begin{frame}{Deliverables of Awkward 1.0}
+\large
+\vspace{0.75 cm}
+Compilable by CMake (for pure C++) or \mintinline{bash}{python setup.py install}.
+
+\vspace{0.5 cm}
+\begin{description}\setlength{\itemsep}{0.5 cm}
+\item[cpu-kernels.so] suite of layer 4 functions with an \mintinline{c++}{extern "C"} interface, which can be accessed by any language (notably C++ and Numba).
+
+\item[libawkward.so] library of layer 3 classes that can be used in any C++ project.
+
+\item[\hspace{0.75 cm}awkward1] Python library: layer 1 (user interface), layer 2 (extension module), and layer 3 (Numba extensions, if Numba is installed).
+\end{description}
+
+\vspace{0.75 cm}
+\textcolor{blue}{\normalsize \url{https://pypi.org/project/awkward1/\#files}} hosts 29 binary wheels and 1 source package; most users will \mintinline{bash}{pip install} without compiling.
+\end{frame}
+
+\begin{frame}{Timeframe}
+\Large
+\begin{center}
+It is minimally testable now \textcolor{gray}{(for Coffea and thrill-seekers)}.
+
+\vspace{1 cm}
+Will be minimally usable for physics analysis in ``early 2020.''
+
+\vspace{1 cm}
+\end{center}
+
+Start an {\normalsize \mintinline{python}{import awkward}} $\to$ {\normalsize \mintinline{python}{import awkward0}} \\
+\phantom{Start an} {\normalsize \mintinline{python}{import awkward1}} $\to$ {\normalsize \mintinline{python}{import awkward}} transition by spring.
+\end{frame}
+
+\begin{frame}{}
+\vspace{-0.02 cm}
+\begin{columns}
+\column{1.2\linewidth}
+\includegraphics[width=\linewidth]{awkward-roadmap.png}
+\end{columns}
+\end{frame}
 
 
 \end{document}
