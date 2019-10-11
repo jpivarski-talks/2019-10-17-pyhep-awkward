@@ -60,11 +60,57 @@
 adsf
 \end{frame}
 
-\begin{frame}{Layer 2: pybind11 of C++}
-\hfill\includegraphics[height=4 cm]{awkward-1-0-layers-mini-pybind11.pdf}
+\begin{frame}[fragile]{Layer 2: pybind11 of C++}
+\vspace{0.5 cm}
+\hfill\mbox{\includegraphics[height=4 cm]{awkward-1-0-layers-mini-pybind11.pdf}\hspace{-0.75 cm}}
 
-\vspace{-4 cm}
-Stuff here
+\scriptsize
+\vspace{-4.45 cm}
+\begin{columns}
+\column{1.1\linewidth}
+\begin{minted}{python}
+import awkward1, numpy
+
+content = awkward1.layout.NumpyArray(numpy.arange(10)*1.1)
+listA   = awkward1.layout.ListOffsetArray32(
+            awkward1.layout.Index32(numpy.array([0, 3, 3, 5, 6, 10])),
+            content)
+listB   = awkward1.layout.ListOffsetArray32(
+            awkward1.layout.Index32(numpy.array([0, 3, 4, 4, 5])),
+            listA)
+
+print(awkward1.tolist(listA))
+\end{minted}
+
+\vspace{-0.5 cm}
+\begin{verbatim}
+[[0.0, 1.1, 2.2], [], [3.3, 4.4], [5.5], [6.6, 7.7, 8.8, 9.9]]
+\end{verbatim}
+\begin{minted}{python}
+print(awkward1.tolist(listB))
+\end{minted}
+
+\vspace{-0.5 cm}
+\begin{verbatim}
+[[[0.0, 1.1, 2.2], [], [3.3, 4.4]], [[5.5]], [], [[6.6, 7.7, 8.8, 9.9]]]
+\end{verbatim}
+\begin{minted}{python}
+print(awkward1.tolist(listB[:, ::-1, ::2]))
+\end{minted}
+
+\vspace{-0.5 cm}
+\begin{verbatim}
+[[[3.3], [], [0.0, 2.2]], [[5.5]], [], [[6.6, 8.8]]]    (old awkward-array can't do this)
+\end{verbatim}
+\begin{minted}{python}
+print(awkward1.tolist(listB[[0, 0, -1, -1], [0, -1, 0, -1], 1:-1]))
+\end{minted}
+
+\vspace{-0.5 cm}
+\begin{verbatim}
+[[1.1], [], [7.7, 8.8], [7.7, 8.8]]                     (mixing fancy and basic indexing)
+\end{verbatim}
+\end{columns}
 \end{frame}
 
 \begin{frame}{Layer 3: C++ classes}
