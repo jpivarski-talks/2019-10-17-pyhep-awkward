@@ -408,6 +408,24 @@ But only $\mathcal{O}(\mbox{depth of type})$ operations are performed in C++; $\
 \end{center}
 \end{frame}
 
+\begin{frame}{Deliverables}
+\large
+\vspace{0.75 cm}
+Compilable by CMake (for pure C++) or \mintinline{bash}{python setup.py install}.
+
+\vspace{0.5 cm}
+\begin{description}\setlength{\itemsep}{0.5 cm}
+\item[cpu-kernels.so] suite of Layer 4 functions with an \mintinline{c++}{extern "C"} interface, which can be accessed by any language (notably C++ and Numba).
+
+\item[libawkward.so] library of Layer 3 classes that can be used in any C++ project.
+
+\item[\hspace{0.75 cm}awkward1] Python library: Layer 1 (user interface), Layer 2 (extension module), and Layer 3 (Numba extensions, if Numba is installed).
+\end{description}
+
+\vspace{0.75 cm}
+\textcolor{blue}{\normalsize \url{https://pypi.org/project/awkward1/\#files}} hosts 29 binary wheels and 1 source package; most users will \mintinline{bash}{pip install} without compiling.
+\end{frame}
+
 \begin{frame}{}
 \huge
 \vspace{1 cm}
@@ -501,11 +519,11 @@ Awkward 1.0 operations will optionally pass through an \mintinline{c++}{Identity
 
 \vspace{0.25 cm}
 \begin{uncoverenv}<2->
-Good for error messages:
+Good for error messages\ldots
 
 \small
 \begin{minted}{python}
->>> dataset.setid()   # generate Identiti
+>>> dataset.setid()   # generate Identities
 >>> primary_jet_for_muon = dataset[:, "muons", :, "jets", 0]
 \end{minted}
 
@@ -520,10 +538,48 @@ ValueError: in ListArray32 at id[10374, "muons", 1, "jets"] attempting
 \end{columns}
 \end{frame}
 
-\begin{frame}{}
+\begin{frame}[fragile]{\ldots but motivated by investigations into set-based languages}
+\vspace{0.1 cm}
+\begin{center}
+\fbox{\textcolor{blue}{\url{https://github.com/jpivarski/PartiQL}}}
+\end{center}
 
+\vspace{-0.25 cm}
+\begin{columns}
+\column{1.02\linewidth}
+\scriptsize
+\begin{Verbatim}[commandchars=\\\{\}]
+\textcolor{gray}{# For events with at least three leptons (electrons or muons) and a same-flavor}
+\textcolor{gray}{# opposite-sign lepton pair, find the same-flavor opposite-sign lepton pair with a}
+\textcolor{gray}{# mass closest to 91.2 GeV; make a histogram of the pT of the leading other lepton.}
+\end{Verbatim}
 
+\small
+\vspace{-0.25 cm}
+\begin{Verbatim}[commandchars=\\\{\}]
+leptons = electrons \textcolor{darkgreen}{\textbf{union}} muons
+\end{Verbatim}
 
+\vspace{-0.45 cm}
+\begin{Verbatim}[commandchars=\\\{\}]
+\textcolor{darkgreen}{\textbf{cut}} \textcolor{blue}{count}(leptons) >= \textcolor{darkorange}{3} \textcolor{darkgreen}{\textbf{named}} \textcolor{darkorange}{"three_leptons"} \{
+    Z = electrons \textcolor{darkgreen}{\textbf{as}} (lep1, lep2) \textcolor{darkgreen}{\textbf{union}} muons \textcolor{darkgreen}{\textbf{as}} (lep1, lep2)
+            \textcolor{darkgreen}{\textbf{where}} lep1\textcolor{blue}{.charge} != lep2\textcolor{blue}{.charge}
+            \textcolor{darkgreen}{\textbf{min by}} \textcolor{blue}{abs}(\textcolor{blue}{mass}(lep1, lep2) - \textcolor{darkorange}{91.2})
+\end{Verbatim}
+
+\vspace{-0.45 cm}
+\begin{Verbatim}[commandchars=\\\{\}]
+    third = leptons \textcolor{darkgreen}{\textbf{except}} [Z\textcolor{blue}{.lep1}, Z\textcolor{blue}{.lep2}] \textcolor{darkgreen}{\textbf{max by}} pt
+    \textcolor{darkgreen}{\textbf{hist}} third.pt \textcolor{darkgreen}{\textbf{by}} \textcolor{blue}{regular}(\textcolor{darkorange}{100}, \textcolor{darkorange}{0}, \textcolor{darkorange}{250}) \textcolor{darkgreen}{\textbf{named}} \textcolor{darkorange}{"third_pt"}
+\}
+\end{Verbatim}
+
+\large
+\fbox{\begin{minipage}{\linewidth}
+An \mintinline{c++}{Identity} (surrogate-key index) is needed to define set operations like \textcolor{darkgreen}{\tt\textbf{join}}, \textcolor{darkgreen}{\tt\textbf{cross}}, \textcolor{darkgreen}{\tt\textbf{union}}, and \textcolor{darkgreen}{\tt\textbf{except}} such that particles are never duplicated.
+\end{minipage}}
+\end{columns}
 \end{frame}
 
 \begin{frame}{}
@@ -532,24 +588,6 @@ ValueError: in ListArray32 at id[10374, "muons", 1, "jets"] attempting
 \begin{center}
 \textcolor{darkblue}{HERE}
 \end{center}
-\end{frame}
-
-\begin{frame}{Deliverables of Awkward 1.0}
-\large
-\vspace{0.75 cm}
-Compilable by CMake (for pure C++) or \mintinline{bash}{python setup.py install}.
-
-\vspace{0.5 cm}
-\begin{description}\setlength{\itemsep}{0.5 cm}
-\item[cpu-kernels.so] suite of Layer 4 functions with an \mintinline{c++}{extern "C"} interface, which can be accessed by any language (notably C++ and Numba).
-
-\item[libawkward.so] library of Layer 3 classes that can be used in any C++ project.
-
-\item[\hspace{0.75 cm}awkward1] Python library: Layer 1 (user interface), Layer 2 (extension module), and Layer 3 (Numba extensions, if Numba is installed).
-\end{description}
-
-\vspace{0.75 cm}
-\textcolor{blue}{\normalsize \url{https://pypi.org/project/awkward1/\#files}} hosts 29 binary wheels and 1 source package; most users will \mintinline{bash}{pip install} without compiling.
 \end{frame}
 
 \begin{frame}{Timeframe}
