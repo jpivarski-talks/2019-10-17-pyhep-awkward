@@ -65,7 +65,7 @@
 \end{columns}
 \end{frame}
 
-\begin{frame}{But not beyond particle physics, obviously}
+\begin{frame}{But not outside of particle physics, obviously}
 \vspace{0.5 cm}
 \begin{columns}
 \column{1.2\linewidth}
@@ -146,7 +146,7 @@
 \item<5-> \large Desire to use awkward-arrays in Numba, on GPUs, and in C++ library interfaces leads to duplication; hard to synchronize implementations.
 \end{itemize}
 
-\item<6-> Feedback from users revealed some design mistakes.
+\item<6-> Feedback from users revealed some interface mistakes.
 
 \vspace{0.1 cm}
 \begin{itemize}\setlength{\itemsep}{0.2 cm}
@@ -624,7 +624,7 @@ Good for error messages\ldots
 \end{minted}
 
 \vspace{-0.5 cm}
-\begin{onlyenv}<2>
+\begin{onlyenv}<-2>
 \begin{Verbatim}[commandchars=\\\{\}]
 Traceback (most recent call last):
   File "<stdin>", line 2, in <module>
@@ -643,7 +643,7 @@ ValueError: in ListArray32 \textcolor{darkgreen2}{\underline{\tt{}at id[10374, "
 \end{columns}
 \end{frame}
 
-\begin{frame}[fragile]{\ldots but motivated by investigations into set-based languages}
+\begin{frame}[fragile]{\ldots but it was motivated by investigations into set-based languages}
 \vspace{0.1 cm}
 \begin{center}
 \fbox{\textcolor{blue}{\url{https://github.com/jpivarski/PartiQL}}}
