@@ -31,6 +31,7 @@
 \xdefinecolor{darkred}{rgb}{0.7,0,0}
 \definecolor{darkgreen}{rgb}{0,0.6,0}
 \definecolor{mauve}{rgb}{0.58,0,0.82}
+\definecolor{darkgreen2}{rgb}{0,0.5,0}
 
 \title[2019-10-17-pyhep-awkward]{Awkward 1.0}
 \author{Jim Pivarski}
@@ -56,7 +57,7 @@
 
 % START START START START START START START START START START START START START
 
-\begin{frame}{On Scientific Linux, uproot/awkward is installed as often as Pandas}
+\begin{frame}{On Scientific Linux, uproot/awkward/coffea is mainstream}
 \vspace{0.5 cm}
 \begin{columns}
 \column{1.2\linewidth}
@@ -64,7 +65,7 @@
 \end{columns}
 \end{frame}
 
-\begin{frame}{But not beyond particle physics, obviously}
+\begin{frame}{But not outside of particle physics, obviously}
 \vspace{0.5 cm}
 \begin{columns}
 \column{1.2\linewidth}
@@ -145,7 +146,7 @@
 \item<5-> \large Desire to use awkward-arrays in Numba, on GPUs, and in C++ library interfaces leads to duplication; hard to synchronize implementations.
 \end{itemize}
 
-\item<6-> Feedback from users revealed some design mistakes.
+\item<6-> Feedback from users revealed some interface mistakes.
 
 \vspace{0.1 cm}
 \begin{itemize}\setlength{\itemsep}{0.2 cm}
@@ -610,7 +611,7 @@ Used throughout \mintinline{c++}{getitem_next} to ``carry'' information from one
 \vspace{0.5 cm}
 \begin{columns}
 \column{1.03\linewidth}
-Awkward 1.0 operations will optionally pass through an \mintinline{c++}{Identity}, an extra array that associates permanent coordinates with each value in the data.
+Awkward 1.0 operations will optionally pass around an \mintinline{c++}{Identity}, an extra array that attaches permanent coordinates to each number, list, and record in the data.
 
 \vspace{0.25 cm}
 \begin{uncoverenv}<2->
@@ -623,17 +624,26 @@ Good for error messages\ldots
 \end{minted}
 
 \vspace{-0.5 cm}
-\begin{verbatim}
+\begin{onlyenv}<-2>
+\begin{Verbatim}[commandchars=\\\{\}]
 Traceback (most recent call last):
   File "<stdin>", line 2, in <module>
 ValueError: in ListArray32 at id[10374, "muons", 1, "jets"] attempting
             to get 0, index out of range
-\end{verbatim}
+\end{Verbatim}
+\end{onlyenv}\begin{onlyenv}<3>
+\begin{Verbatim}[commandchars=\\\{\}]
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+ValueError: in ListArray32 \textcolor{darkgreen2}{\underline{\tt{}at id[10374, "muons", 1, "jets"]}} attempting
+            to get 0, index out of range
+\end{Verbatim}
+\end{onlyenv}
 \end{uncoverenv}
 \end{columns}
 \end{frame}
 
-\begin{frame}[fragile]{\ldots but motivated by investigations into set-based languages}
+\begin{frame}[fragile]{\ldots but it was motivated by investigations into set-based languages}
 \vspace{0.1 cm}
 \begin{center}
 \fbox{\textcolor{blue}{\url{https://github.com/jpivarski/PartiQL}}}
@@ -687,11 +697,11 @@ With a dataset in Awkward form (from TTrees, RNtuples, Arrow\ldots), we want to
 \item<2-> perform Numpy-like slicing, reduction, and vectorized operations,
 \item<3-> enter a compiled Numba function for imperative code in Python,
 \item<4-> pass to/from a C++ library (e.g.\ jagged array of Lorentz vectors to FastJet),
-\item<5-> apply an expression using a HEP-specific domain specific language,
+\item<5-> compute combinatorics with a HEP-specific domain specific language,
 \end{itemize}
 
 \vspace{0.25 cm}
-\uncover<6->{interchangeably.}
+\uncover<6->{\underline{interchangeably}.}
 
 \vspace{0.5 cm}
 \begin{center}
